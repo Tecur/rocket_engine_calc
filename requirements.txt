@@ -61,7 +61,7 @@ sqlalchemy==1.2.11
 structure==0.1.7
 sympy==1.1.1
 terminado==0.8.1
-testpath==0.3.1
+testpath==0.4.2
 tornado==4.5.3
 traitlets==4.3.2
 wcwidth==0.1.7
