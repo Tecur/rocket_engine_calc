@@ -40,14 +40,14 @@ def fnk_a_e(m_e,a_t,gamma):
 
 def fnk_d_e(a_e):
 	return math.sqrt(((4*a_e)/math.pi))
-	
+
 #Chamber
 def fnk_l_c(d_t):
 	return ((math.exp(0.029*(math.log(d_t*100)**2) +0.47*math.log(d_t*100) +1.94))/100)
-	
+
 def fnk_v_c(l_c,d_c,d_t,theta):
 	return ((math.pi/24)*(6*l_c*(d_c**2)+(((d_c**3)-(d_t**3))/(math.tan(theta)))))
-	
+
 def fnk_d_c(d_t,theta,v_c,l_c):
 	d_c = 1.2*d_t
 	i = 0
@@ -55,8 +55,11 @@ def fnk_d_c(d_t,theta,v_c,l_c):
 		d_c = math.sqrt(((d_t**3) + (24/math.pi) * tan(theta)  * v_c) / (d_c + 6 * tan(theta)  * l_c))
 		i += 1
 	return d_c
-	
-	
+
+def fnk_t_w(p_c,d_c):
+	return
+
+
 #Input
 global f,isp,r,t_c,p_c,gamma,m
 f = float(input("Thrust [N] ? "))
