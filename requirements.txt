@@ -2,7 +2,7 @@ alembic==1.0.0
 altgraph==0.15
 arduino==0.0.1
 arduino-sketch==0.2
-bleach==2.1.2
+bleach==3.1.0
 colorama==0.3.9
 cx-Freeze==5.1.1
 cycler==0.10.0
