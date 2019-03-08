@@ -24,10 +24,11 @@ namespace rocket_engine_calc
             double p0 = Convert.ToDouble(i_brenndr.Text);
             double pa = Convert.ToDouble(i_aussendr.Text);
             double kappa = Convert.ToDouble(i_diabaten.Text);
-            //double l_star = Convert.ToDouble(i_char_laenge.Text);
+            double l_star = Convert.ToDouble(i_char_laenge.Text);
             double Isp = Convert.ToDouble(i_isp.Text);
             double T0 = Convert.ToDouble(i_T0.Text);
             double Mm = Convert.ToDouble(i_Molmasse.Text);
+            double theta = Convert.ToDouble(i_theta.Text);
             double R_star = 8314.4598;
             double pe = pa; //angepasste Düse
             double g = 9.81;
@@ -43,29 +44,53 @@ namespace rocket_engine_calc
             double pt = Get_pt(p0, kappa);
             //Tt
             double Tt = Get_Tt(kappa, T0);
-            //At
+            //At (in m^2)
             double At = Get_At(kappa, Mm, R_star, massflow, pt, Tt);
-            //Ae
+            //Ae (in m^2)
             double Ae = Get_Ae(kappa, Ma_e, At);
-
+            //Dt (in cm)
+            double Dt = 2 * Math.Sqrt(At*10000 / Math.PI);
+            //De (in cm)
+            double De = 2 * Math.Sqrt(Ae*10000 / Math.PI);
+            //Vc (in cm^3)
+            double Vc = At * 10000 * l_star;
+            //Lc (in cm)
+            //Näherung zweiter Ordnung (mit Vorsicht zu betrachten, lieber eigene Erfahrungswerte nutzen)
+            double Lc = Math.Exp(0.029*Math.Pow(Math.Log(Dt),2) +0.47*Math.Log(Dt) +1.94);
+            //Dc (in cm)
+            //Finden durch Iteration
+            double Dc = 0;
+            for(int i = 0; i < 4; i++) {
+                Dc = Math.Sqrt((Math.Pow(Dt, 3) + (24 / Math.PI) * Math.Tan(((Math.PI / 180) * theta)) * Vc) / (Dc + 6 * Math.Tan(((Math.PI / 180) * theta)) * Lc));
+            }
             //Ergebnisse anzeigen
             l_ergebnis.Text = "";
             l_ergebnis.Text += "Ma_e = " + Convert.ToString(Ma_e) + " [-]" + Environment.NewLine;
             System.Diagnostics.Debug.WriteLine("Ma_e = " + Convert.ToString(Ma_e) + " [-]");
-            l_ergebnis.Text += "epsilon = " + Convert.ToString(epsilon) + " [-]" + Environment.NewLine;
-            System.Diagnostics.Debug.WriteLine("epsilon = " + Convert.ToString(epsilon) + " [-]");
-            l_ergebnis.Text += "Gamma = " + Convert.ToString(Gamma) + " [-]" + Environment.NewLine;
-            System.Diagnostics.Debug.WriteLine("Gamma = " + Convert.ToString(Gamma) + " [-]");
+            l_ergebnis.Text += "ε = " + Convert.ToString(epsilon) + " [-]" + Environment.NewLine;
+            System.Diagnostics.Debug.WriteLine("ε = " + Convert.ToString(epsilon) + " [-]");
+            l_ergebnis.Text += "Γ = " + Convert.ToString(Gamma) + " [-]" + Environment.NewLine;
+            System.Diagnostics.Debug.WriteLine("Γ = " + Convert.ToString(Gamma) + " [-]");
             l_ergebnis.Text += "m. = " + Convert.ToString(massflow) + " [kg/s]" + Environment.NewLine;
             System.Diagnostics.Debug.WriteLine("m. = " + Convert.ToString(massflow) + " [kg/s]");
             l_ergebnis.Text += "pt = " + Convert.ToString(pt) + " [Pa]" + Environment.NewLine;
             System.Diagnostics.Debug.WriteLine("pt = " + Convert.ToString(pt) + " [Pa]");
             l_ergebnis.Text += "Tt = " + Convert.ToString(Tt) + " [K]" + Environment.NewLine;
             System.Diagnostics.Debug.WriteLine("Tt = " + Convert.ToString(Tt) + " [K]");
-            l_ergebnis.Text += "At = " + Convert.ToString(At) + " [m²]" + Environment.NewLine;
-            System.Diagnostics.Debug.WriteLine("At = " + Convert.ToString(At) + " [m²]");
-            l_ergebnis.Text += "Ae = " + Convert.ToString(Ae) + " [m²]" + Environment.NewLine;
-            System.Diagnostics.Debug.WriteLine("Ae = " + Convert.ToString(Ae) + " [m²]");
+            l_ergebnis.Text += "At = " + Convert.ToString((At*10000)) + " [cm²]" + Environment.NewLine;
+            System.Diagnostics.Debug.WriteLine("At = " + Convert.ToString((At*10000)) + " [cm²]");
+            l_ergebnis.Text += "Ae = " + Convert.ToString((Ae*10000)) + " [cm²]" + Environment.NewLine;
+            System.Diagnostics.Debug.WriteLine("Ae = " + Convert.ToString((Ae*10000)) + " [cm²]");
+            l_ergebnis.Text += "Dt = " + Convert.ToString(Dt) + " [cm]" + Environment.NewLine;
+            System.Diagnostics.Debug.WriteLine("Dt = " + Convert.ToString(Dt) + " [cm]");
+            l_ergebnis.Text += "De = " + Convert.ToString(De) + " [cm]" + Environment.NewLine;
+            System.Diagnostics.Debug.WriteLine("De = " + Convert.ToString(De) + " [cm]");
+            l_ergebnis.Text += "Dc = " + Convert.ToString(Dc) + " [cm]" + Environment.NewLine;
+            System.Diagnostics.Debug.WriteLine("Dc = " + Convert.ToString(Dc) + " [cm]");
+            l_ergebnis.Text += "Vc = " + Convert.ToString(Vc) + " [cm³]" + Environment.NewLine;
+            System.Diagnostics.Debug.WriteLine("Vc = " + Convert.ToString(Vc) + " [cm³]");
+            l_ergebnis.Text += "Lc = " + Convert.ToString(Lc) + " [cm]" + Environment.NewLine;
+            System.Diagnostics.Debug.WriteLine("Lc = " + Convert.ToString(Lc) + " [cm]");
         }
 
         private static double Get_Ae(double kappa, double Ma_e, double At)
