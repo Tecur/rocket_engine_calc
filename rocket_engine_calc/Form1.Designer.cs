@@ -28,22 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.gB_Zielwerte = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.i_schub = new System.Windows.Forms.TextBox();
             this.i_brenndr = new System.Windows.Forms.TextBox();
             this.i_aussendr = new System.Windows.Forms.TextBox();
             this.i_diabaten = new System.Windows.Forms.TextBox();
-            this.i_char_laenge = new System.Windows.Forms.TextBox();
             this.i_isp = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -67,9 +65,10 @@
             this.gB_Zielwerte.AutoSize = true;
             this.gB_Zielwerte.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gB_Zielwerte.Controls.Add(this.tableLayoutPanel1);
+            this.gB_Zielwerte.Dock = System.Windows.Forms.DockStyle.Left;
             this.gB_Zielwerte.Location = new System.Drawing.Point(0, 0);
             this.gB_Zielwerte.Name = "gB_Zielwerte";
-            this.gB_Zielwerte.Size = new System.Drawing.Size(465, 353);
+            this.gB_Zielwerte.Size = new System.Drawing.Size(417, 719);
             this.gB_Zielwerte.TabIndex = 0;
             this.gB_Zielwerte.TabStop = false;
             this.gB_Zielwerte.Text = "Zielwerte";
@@ -86,30 +85,27 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label8, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label9, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.i_schub, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.i_brenndr, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.i_aussendr, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.i_diabaten, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.i_char_laenge, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.i_isp, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label12, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.i_isp, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label12, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label13, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.i_T0, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label14, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.i_Molmasse, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label15, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label16, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.label13, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.i_T0, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label14, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.i_Molmasse, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label15, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label16, 2, 7);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 27);
             this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(0, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 9;
+            this.tableLayoutPanel1.RowCount = 8;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -118,8 +114,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(456, 296);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(408, 259);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label2
@@ -136,7 +132,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(403, 6);
+            this.label3.Location = new System.Drawing.Point(355, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 25);
             this.label3.TabIndex = 2;
@@ -146,7 +142,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(403, 43);
+            this.label4.Location = new System.Drawing.Point(355, 43);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 25);
             this.label4.TabIndex = 3;
@@ -162,21 +158,11 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Adiabatenexponent k:";
             // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 154);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(288, 25);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Char. Brennkammerlänge L*:";
-            // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(403, 80);
+            this.label8.Location = new System.Drawing.Point(355, 80);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 25);
             this.label8.TabIndex = 9;
@@ -186,21 +172,11 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(403, 117);
+            this.label9.Location = new System.Drawing.Point(355, 117);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 25);
             this.label9.TabIndex = 10;
             this.label9.Text = "[-]";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(403, 154);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 25);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "[m]";
             // 
             // label5
             // 
@@ -215,7 +191,7 @@
             // i_schub
             // 
             this.i_schub.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.i_schub.Location = new System.Drawing.Point(297, 3);
+            this.i_schub.Location = new System.Drawing.Point(249, 3);
             this.i_schub.Name = "i_schub";
             this.i_schub.Size = new System.Drawing.Size(100, 31);
             this.i_schub.TabIndex = 12;
@@ -224,7 +200,7 @@
             // i_brenndr
             // 
             this.i_brenndr.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.i_brenndr.Location = new System.Drawing.Point(297, 40);
+            this.i_brenndr.Location = new System.Drawing.Point(249, 40);
             this.i_brenndr.Name = "i_brenndr";
             this.i_brenndr.Size = new System.Drawing.Size(100, 31);
             this.i_brenndr.TabIndex = 13;
@@ -233,7 +209,7 @@
             // i_aussendr
             // 
             this.i_aussendr.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.i_aussendr.Location = new System.Drawing.Point(297, 77);
+            this.i_aussendr.Location = new System.Drawing.Point(249, 77);
             this.i_aussendr.Name = "i_aussendr";
             this.i_aussendr.Size = new System.Drawing.Size(100, 31);
             this.i_aussendr.TabIndex = 14;
@@ -242,25 +218,16 @@
             // i_diabaten
             // 
             this.i_diabaten.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.i_diabaten.Location = new System.Drawing.Point(297, 114);
+            this.i_diabaten.Location = new System.Drawing.Point(249, 114);
             this.i_diabaten.Name = "i_diabaten";
             this.i_diabaten.Size = new System.Drawing.Size(100, 31);
             this.i_diabaten.TabIndex = 15;
             this.i_diabaten.Text = "0";
             // 
-            // i_char_laenge
-            // 
-            this.i_char_laenge.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.i_char_laenge.Location = new System.Drawing.Point(297, 151);
-            this.i_char_laenge.Name = "i_char_laenge";
-            this.i_char_laenge.Size = new System.Drawing.Size(100, 31);
-            this.i_char_laenge.TabIndex = 16;
-            this.i_char_laenge.Text = "0";
-            // 
             // i_isp
             // 
             this.i_isp.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.i_isp.Location = new System.Drawing.Point(297, 188);
+            this.i_isp.Location = new System.Drawing.Point(249, 151);
             this.i_isp.Name = "i_isp";
             this.i_isp.Size = new System.Drawing.Size(100, 31);
             this.i_isp.TabIndex = 17;
@@ -270,7 +237,7 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(403, 191);
+            this.label11.Location = new System.Drawing.Point(355, 154);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 25);
             this.label11.TabIndex = 18;
@@ -280,7 +247,7 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 191);
+            this.label12.Location = new System.Drawing.Point(3, 154);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 25);
             this.label12.TabIndex = 19;
@@ -300,7 +267,7 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 228);
+            this.label13.Location = new System.Drawing.Point(3, 191);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(240, 25);
             this.label13.TabIndex = 20;
@@ -309,7 +276,7 @@
             // i_T0
             // 
             this.i_T0.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.i_T0.Location = new System.Drawing.Point(297, 225);
+            this.i_T0.Location = new System.Drawing.Point(249, 188);
             this.i_T0.Name = "i_T0";
             this.i_T0.Size = new System.Drawing.Size(100, 31);
             this.i_T0.TabIndex = 21;
@@ -319,7 +286,7 @@
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(403, 228);
+            this.label14.Location = new System.Drawing.Point(355, 191);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(38, 25);
             this.label14.TabIndex = 22;
@@ -328,7 +295,7 @@
             // i_Molmasse
             // 
             this.i_Molmasse.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.i_Molmasse.Location = new System.Drawing.Point(297, 262);
+            this.i_Molmasse.Location = new System.Drawing.Point(249, 225);
             this.i_Molmasse.Name = "i_Molmasse";
             this.i_Molmasse.Size = new System.Drawing.Size(100, 31);
             this.i_Molmasse.TabIndex = 23;
@@ -338,7 +305,7 @@
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 265);
+            this.label15.Location = new System.Drawing.Point(3, 228);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(234, 25);
             this.label15.TabIndex = 24;
@@ -348,7 +315,7 @@
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(403, 265);
+            this.label16.Location = new System.Drawing.Point(355, 228);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(31, 25);
             this.label16.TabIndex = 25;
@@ -356,10 +323,13 @@
             // 
             // B_calc
             // 
+            this.B_calc.AutoSize = true;
+            this.B_calc.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.B_calc.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.B_calc.Location = new System.Drawing.Point(0, 661);
+            this.B_calc.Location = new System.Drawing.Point(417, 669);
+            this.B_calc.MinimumSize = new System.Drawing.Size(0, 50);
             this.B_calc.Name = "B_calc";
-            this.B_calc.Size = new System.Drawing.Size(1186, 58);
+            this.B_calc.Size = new System.Drawing.Size(769, 50);
             this.B_calc.TabIndex = 1;
             this.B_calc.Text = "Berechnen";
             this.B_calc.UseVisualStyleBackColor = true;
@@ -370,10 +340,11 @@
             this.groupBox1.AutoSize = true;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.l_ergebnis);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 578);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox1.Location = new System.Drawing.Point(886, 0);
+            this.groupBox1.MinimumSize = new System.Drawing.Size(300, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1186, 83);
+            this.groupBox1.Size = new System.Drawing.Size(300, 669);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ergebnisse";
@@ -396,6 +367,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.B_calc);
             this.Controls.Add(this.gB_Zielwerte);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form";
             this.Text = "Raketenmotor Rechner";
             this.gB_Zielwerte.ResumeLayout(false);
@@ -419,16 +391,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button B_calc;
         private System.Windows.Forms.TextBox i_schub;
         private System.Windows.Forms.TextBox i_brenndr;
         private System.Windows.Forms.TextBox i_aussendr;
         private System.Windows.Forms.TextBox i_diabaten;
-        private System.Windows.Forms.TextBox i_char_laenge;
         private System.Windows.Forms.TextBox i_isp;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;

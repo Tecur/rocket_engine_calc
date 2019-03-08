@@ -100,7 +100,7 @@ namespace rocket_engine_calc
 
         private static double Get_epsilon(double pe, double p0, double kappa, double Ma_e)
         {
-            return Get_Gamma(kappa)*Math.Pow(pe/p0,-1/kappa)*Math.Pow(((2*kappa)/(kappa-1))*(1-Math.Pow(pe/p0,(kappa-1)/kappa)),-1/2);
+            return (1/Ma_e)*Math.Pow((2/(kappa+1))*(1+((kappa-1)/2)*Math.Pow(Ma_e,2)),(kappa+1)/(2*(kappa-1)));
         }
 
         private static double Get_Ma_e(double p0, double pa, double kappa)
