@@ -132,5 +132,34 @@ namespace rocket_engine_calc
         {
             return Math.Sqrt(2 / (kappa - 1) * (Math.Pow(p0 / pa, (kappa - 1) / kappa) - 1));
         }
+
+        private void NeuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Neu
+            i_schub.Text = "0";
+            i_brenndr.Text = "0";
+            i_aussendr.Text = "0";
+            i_diabaten.Text = "0";
+            i_char_laenge.Text = "0";
+            i_isp.Text = "0";
+            i_T0.Text = "0";
+            i_Molmasse.Text = "0";
+            i_theta.Text = "0";
+
+            l_ergebnis.Text = "-Berechnen drücken-";
+        }
+
+        private void BeendenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Beenden
+            Application.Exit();
+        }
+
+        private void überRECalcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Über
+            Form_about f = new Form_about();
+            f.Show();
+        }
     }
 }

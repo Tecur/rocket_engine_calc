@@ -1,0 +1,10 @@
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.exe.config
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.exe
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.pdb
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Properties.Resources.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.GenerateResource.cache
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.CoreCompileInputs.cache
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.exe
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.pdb
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csprojAssemblyReference.cache

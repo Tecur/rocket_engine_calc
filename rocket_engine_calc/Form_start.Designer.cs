@@ -52,18 +52,37 @@
             this.i_Molmasse = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.B_calc = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.l_ergebnis = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.i_char_laenge = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.i_theta = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.B_calc = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.l_ergebnis = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.neuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.öffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.speichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hilfeAnzeigenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.problemMeldenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vorschlagMachenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.überRECalcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gB_Zielwerte.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gB_Zielwerte
@@ -72,9 +91,9 @@
             this.gB_Zielwerte.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gB_Zielwerte.Controls.Add(this.tableLayoutPanel1);
             this.gB_Zielwerte.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gB_Zielwerte.Location = new System.Drawing.Point(0, 0);
+            this.gB_Zielwerte.Location = new System.Drawing.Point(0, 42);
             this.gB_Zielwerte.Name = "gB_Zielwerte";
-            this.gB_Zielwerte.Size = new System.Drawing.Size(456, 719);
+            this.gB_Zielwerte.Size = new System.Drawing.Size(456, 677);
             this.gB_Zielwerte.TabIndex = 0;
             this.gB_Zielwerte.TabStop = false;
             this.gB_Zielwerte.Text = "Zielwerte";
@@ -334,43 +353,6 @@
             this.label16.TabIndex = 25;
             this.label16.Text = "[-]";
             // 
-            // B_calc
-            // 
-            this.B_calc.AutoSize = true;
-            this.B_calc.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.B_calc.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.B_calc.Location = new System.Drawing.Point(456, 669);
-            this.B_calc.MinimumSize = new System.Drawing.Size(0, 50);
-            this.B_calc.Name = "B_calc";
-            this.B_calc.Size = new System.Drawing.Size(730, 50);
-            this.B_calc.TabIndex = 1;
-            this.B_calc.Text = "Berechnen";
-            this.B_calc.UseVisualStyleBackColor = true;
-            this.B_calc.Click += new System.EventHandler(this.B_calc_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.AutoSize = true;
-            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox1.Controls.Add(this.l_ergebnis);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox1.Location = new System.Drawing.Point(886, 0);
-            this.groupBox1.MinimumSize = new System.Drawing.Size(300, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(300, 669);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ergebnisse";
-            // 
-            // l_ergebnis
-            // 
-            this.l_ergebnis.AutoSize = true;
-            this.l_ergebnis.Location = new System.Drawing.Point(13, 31);
-            this.l_ergebnis.Name = "l_ergebnis";
-            this.l_ergebnis.Size = new System.Drawing.Size(213, 25);
-            this.l_ergebnis.TabIndex = 0;
-            this.l_ergebnis.Text = "-Berechnen drücken-";
-            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -429,6 +411,175 @@
             this.label18.TabIndex = 31;
             this.label18.Text = "[°]";
             // 
+            // B_calc
+            // 
+            this.B_calc.AutoSize = true;
+            this.B_calc.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.B_calc.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.B_calc.Location = new System.Drawing.Point(456, 669);
+            this.B_calc.MinimumSize = new System.Drawing.Size(0, 50);
+            this.B_calc.Name = "B_calc";
+            this.B_calc.Size = new System.Drawing.Size(730, 50);
+            this.B_calc.TabIndex = 1;
+            this.B_calc.Text = "Berechnen";
+            this.B_calc.UseVisualStyleBackColor = true;
+            this.B_calc.Click += new System.EventHandler(this.B_calc_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.l_ergebnis);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox1.Location = new System.Drawing.Point(886, 42);
+            this.groupBox1.MinimumSize = new System.Drawing.Size(300, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(300, 627);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ergebnisse";
+            // 
+            // l_ergebnis
+            // 
+            this.l_ergebnis.AutoSize = true;
+            this.l_ergebnis.Location = new System.Drawing.Point(13, 31);
+            this.l_ergebnis.Name = "l_ergebnis";
+            this.l_ergebnis.Size = new System.Drawing.Size(213, 25);
+            this.l_ergebnis.TabIndex = 0;
+            this.l_ergebnis.Text = "-Berechnen drücken-";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.hilfeToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1186, 42);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.neuToolStripMenuItem,
+            this.öffnenToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.speichernToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.beendenToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(83, 38);
+            this.toolStripMenuItem1.Text = "Datei";
+            // 
+            // neuToolStripMenuItem
+            // 
+            this.neuToolStripMenuItem.Name = "neuToolStripMenuItem";
+            this.neuToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.neuToolStripMenuItem.Text = "Neu";
+            this.neuToolStripMenuItem.Click += new System.EventHandler(this.NeuToolStripMenuItem_Click);
+            // 
+            // öffnenToolStripMenuItem
+            // 
+            this.öffnenToolStripMenuItem.Name = "öffnenToolStripMenuItem";
+            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.öffnenToolStripMenuItem.Text = "Öffnen";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(321, 6);
+            // 
+            // speichernToolStripMenuItem
+            // 
+            this.speichernToolStripMenuItem.Name = "speichernToolStripMenuItem";
+            this.speichernToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.speichernToolStripMenuItem.Text = "Speichern";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(321, 6);
+            // 
+            // beendenToolStripMenuItem
+            // 
+            this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.beendenToolStripMenuItem.Text = "Beenden";
+            this.beendenToolStripMenuItem.Click += new System.EventHandler(this.BeendenToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.einstellungenToolStripMenuItem});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(142, 38);
+            this.toolStripMenuItem2.Text = "Bearbeiten";
+            // 
+            // einstellungenToolStripMenuItem
+            // 
+            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
+            this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
+            this.einstellungenToolStripMenuItem.Text = "Einstellungen";
+            // 
+            // hilfeToolStripMenuItem
+            // 
+            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hilfeAnzeigenToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.toolStripMenuItem3,
+            this.toolStripSeparator4,
+            this.überRECalcToolStripMenuItem});
+            this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
+            this.hilfeToolStripMenuItem.Size = new System.Drawing.Size(77, 38);
+            this.hilfeToolStripMenuItem.Text = "Hilfe";
+            // 
+            // hilfeAnzeigenToolStripMenuItem
+            // 
+            this.hilfeAnzeigenToolStripMenuItem.Name = "hilfeAnzeigenToolStripMenuItem";
+            this.hilfeAnzeigenToolStripMenuItem.Size = new System.Drawing.Size(300, 38);
+            this.hilfeAnzeigenToolStripMenuItem.Text = "Hilfe anzeigen";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(297, 6);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.problemMeldenToolStripMenuItem,
+            this.vorschlagMachenToolStripMenuItem});
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(300, 38);
+            this.toolStripMenuItem3.Text = "Feedback senden";
+            // 
+            // problemMeldenToolStripMenuItem
+            // 
+            this.problemMeldenToolStripMenuItem.Name = "problemMeldenToolStripMenuItem";
+            this.problemMeldenToolStripMenuItem.Size = new System.Drawing.Size(308, 38);
+            this.problemMeldenToolStripMenuItem.Text = "Problem melden";
+            // 
+            // vorschlagMachenToolStripMenuItem
+            // 
+            this.vorschlagMachenToolStripMenuItem.Name = "vorschlagMachenToolStripMenuItem";
+            this.vorschlagMachenToolStripMenuItem.Size = new System.Drawing.Size(308, 38);
+            this.vorschlagMachenToolStripMenuItem.Text = "Vorschlag machen";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(297, 6);
+            // 
+            // überRECalcToolStripMenuItem
+            // 
+            this.überRECalcToolStripMenuItem.Name = "überRECalcToolStripMenuItem";
+            this.überRECalcToolStripMenuItem.Size = new System.Drawing.Size(300, 38);
+            this.überRECalcToolStripMenuItem.Text = "Über RE Calc";
+            this.überRECalcToolStripMenuItem.Click += new System.EventHandler(this.überRECalcToolStripMenuItem_Click);
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -438,15 +589,19 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.B_calc);
             this.Controls.Add(this.gB_Zielwerte);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form";
-            this.Text = "Raketenmotor Rechner";
+            this.Text = "RE Calc v0.1-alpha";
             this.gB_Zielwerte.ResumeLayout(false);
             this.gB_Zielwerte.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,6 +641,24 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox i_theta;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem neuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem öffnenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem speichernToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem beendenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem einstellungenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem hilfeAnzeigenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem problemMeldenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vorschlagMachenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem überRECalcToolStripMenuItem;
     }
 }
 

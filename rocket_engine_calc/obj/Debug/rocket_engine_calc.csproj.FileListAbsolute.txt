@@ -1,10 +1,11 @@
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\rocket_engine_calc.csprojAssemblyReference.cache
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\rocket_engine_calc.Form.resources
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\rocket_engine_calc.Properties.Resources.resources
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\rocket_engine_calc.csproj.GenerateResource.cache
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\rocket_engine_calc.csproj.CoreCompileInputs.cache
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\rocket_engine_calc.exe.config
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\rocket_engine_calc.exe
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\rocket_engine_calc.pdb
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\rocket_engine_calc.exe
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\rocket_engine_calc.pdb
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\RE Calc.exe.config
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\RE Calc.exe
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\RE Calc.pdb
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\RE Calc.exe.CodeAnalysisLog.xml
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\RE Calc.exe.lastcodeanalysissucceeded
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\RE Calc.exe
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\RE Calc.pdb
