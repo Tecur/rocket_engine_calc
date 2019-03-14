@@ -7,4 +7,13 @@ C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Releas
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.CoreCompileInputs.cache
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.exe
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.pdb
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_about.resources
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csprojAssemblyReference.cache
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\Newtonsoft.Json.dll
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\Newtonsoft.Json.pdb
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\Newtonsoft.Json.xml
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.CopyComplete
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.exe.manifest
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.application
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.exe.manifest
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.application

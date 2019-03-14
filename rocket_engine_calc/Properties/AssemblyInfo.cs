@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
 [assembly: AssemblyTitle("rocket_engine_calc")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Calculation program for basic rocket engine parameters.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Joshua Stoll")]
 [assembly: AssemblyProduct("rocket_engine_calc")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]

@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,32 +66,31 @@ namespace rocket_engine_calc
                 Dc = Math.Sqrt((Math.Pow(Dt, 3) + (24 / Math.PI) * Math.Tan(((Math.PI / 180) * theta)) * Vc) / (Dc + 6 * Math.Tan(((Math.PI / 180) * theta)) * Lc));
             }
             //Ergebnisse anzeigen
-            l_ergebnis.Text = "";
-            l_ergebnis.Text += "Ma_e = " + Convert.ToString(Ma_e) + " [-]" + Environment.NewLine;
+            o_mae.Text = Convert.ToString(Ma_e);
             System.Diagnostics.Debug.WriteLine("Ma_e = " + Convert.ToString(Ma_e) + " [-]");
-            l_ergebnis.Text += "ε = " + Convert.ToString(epsilon) + " [-]" + Environment.NewLine;
+            o_epsilon.Text = Convert.ToString(epsilon);
             System.Diagnostics.Debug.WriteLine("ε = " + Convert.ToString(epsilon) + " [-]");
-            l_ergebnis.Text += "Γ = " + Convert.ToString(Gamma) + " [-]" + Environment.NewLine;
+            o_gamma.Text = Convert.ToString(Gamma);
             System.Diagnostics.Debug.WriteLine("Γ = " + Convert.ToString(Gamma) + " [-]");
-            l_ergebnis.Text += "m. = " + Convert.ToString(massflow) + " [kg/s]" + Environment.NewLine;
+            o_mdot.Text = Convert.ToString(massflow);
             System.Diagnostics.Debug.WriteLine("m. = " + Convert.ToString(massflow) + " [kg/s]");
-            l_ergebnis.Text += "pt = " + Convert.ToString(pt) + " [Pa]" + Environment.NewLine;
+            o_pt.Text = Convert.ToString(pt);
             System.Diagnostics.Debug.WriteLine("pt = " + Convert.ToString(pt) + " [Pa]");
-            l_ergebnis.Text += "Tt = " + Convert.ToString(Tt) + " [K]" + Environment.NewLine;
+            o_Tt.Text = Convert.ToString(Tt);
             System.Diagnostics.Debug.WriteLine("Tt = " + Convert.ToString(Tt) + " [K]");
-            l_ergebnis.Text += "At = " + Convert.ToString((At*10000)) + " [cm²]" + Environment.NewLine;
+            o_At.Text = Convert.ToString((At*10000));
             System.Diagnostics.Debug.WriteLine("At = " + Convert.ToString((At*10000)) + " [cm²]");
-            l_ergebnis.Text += "Ae = " + Convert.ToString((Ae*10000)) + " [cm²]" + Environment.NewLine;
+            o_Ae.Text = Convert.ToString((Ae*10000));
             System.Diagnostics.Debug.WriteLine("Ae = " + Convert.ToString((Ae*10000)) + " [cm²]");
-            l_ergebnis.Text += "Dt = " + Convert.ToString(Dt) + " [cm]" + Environment.NewLine;
+            o_Dt.Text = Convert.ToString(Dt);
             System.Diagnostics.Debug.WriteLine("Dt = " + Convert.ToString(Dt) + " [cm]");
-            l_ergebnis.Text += "De = " + Convert.ToString(De) + " [cm]" + Environment.NewLine;
+            o_De.Text = Convert.ToString(De);
             System.Diagnostics.Debug.WriteLine("De = " + Convert.ToString(De) + " [cm]");
-            l_ergebnis.Text += "Dc = " + Convert.ToString(Dc) + " [cm]" + Environment.NewLine;
+            o_Dc.Text = Convert.ToString(Dc);
             System.Diagnostics.Debug.WriteLine("Dc = " + Convert.ToString(Dc) + " [cm]");
-            l_ergebnis.Text += "Vc = " + Convert.ToString(Vc) + " [cm³]" + Environment.NewLine;
+            o_Vc.Text = Convert.ToString(Vc);
             System.Diagnostics.Debug.WriteLine("Vc = " + Convert.ToString(Vc) + " [cm³]");
-            l_ergebnis.Text += "Lc = " + Convert.ToString(Lc) + " [cm]" + Environment.NewLine;
+            o_Lc.Text = Convert.ToString(Lc);
             System.Diagnostics.Debug.WriteLine("Lc = " + Convert.ToString(Lc) + " [cm]");
         }
 
@@ -146,7 +147,21 @@ namespace rocket_engine_calc
             i_Molmasse.Text = "0";
             i_theta.Text = "0";
 
-            l_ergebnis.Text = "-Berechnen drücken-";
+            o_mae.Text = "---";
+            o_Ae .Text = "---";
+            o_At.Text = "---";
+            o_Dc.Text = "---";
+            o_De.Text = "---";
+            o_Dt.Text = "---";
+            o_epsilon.Text = "---";
+            o_gamma.Text = "---";
+            o_Lc.Text = "---";
+            o_mdot.Text = "---";
+            o_pt.Text = "---";
+            o_Tt.Text = "---";
+            o_Vc.Text = "---";
+
+
         }
 
         private void BeendenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -155,11 +170,94 @@ namespace rocket_engine_calc
             Application.Exit();
         }
 
-        private void überRECalcToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ÜberRECalcToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Über
             Form_about f = new Form_about();
             f.Show();
         }
+
+        private void SpeichernToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Displays a SaveFileDialog so the user can save  
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog
+            {
+                FileName = "unknown.recp",
+                Filter = "RE Calc Project|*.recp",
+                Title = "Speichern unter",
+                InitialDirectory = @"C:\",
+                RestoreDirectory = true,
+                DefaultExt = "recp"
+            };
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Data _data = new Data
+                {
+                        F = Convert.ToDouble(i_schub.Text),
+                        P0 = Convert.ToDouble(i_brenndr.Text),
+                        Pa = Convert.ToDouble(i_aussendr.Text),
+                        Kappa = Convert.ToDouble(i_diabaten.Text),
+                        L_star = Convert.ToDouble(i_char_laenge.Text),
+                        Isp = Convert.ToDouble(i_isp.Text),
+                        T0 = Convert.ToDouble(i_T0.Text),
+                        Mm = Convert.ToDouble(i_Molmasse.Text),
+                        Theta = Convert.ToDouble(i_theta.Text)
+                };
+
+                //open file stream
+                using (StreamWriter file = File.CreateText(@saveFileDialog1.FileName))
+                {
+                    System.Diagnostics.Debug.WriteLine("Saving File to: " + saveFileDialog1.FileName);
+
+                    // serialize JSON directly to a file
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.Serialize(file, _data);
+                }
+            }
+        }
+
+        private void ÖffnenToolStripMenuItem_Click(object sender, EventArgs e)
+        {         
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "RE Calc Project|*.recp";
+                openFileDialog.Title = "Öffnen";
+                openFileDialog.InitialDirectory = @"C:\";
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // read file into a string and deserialize JSON to a type
+                    Data [] _open_data = JsonConvert.DeserializeObject<Data[]>(File.ReadAllText(@openFileDialog.FileName));
+
+                        i_schub.Text = Convert.ToString(_open_data[0].F);
+                        i_brenndr.Text = Convert.ToString(_open_data[0].P0);
+                        i_aussendr.Text = Convert.ToString(_open_data[0].Pa);
+                        i_diabaten.Text = Convert.ToString(_open_data[0].Kappa);
+                        i_char_laenge.Text = Convert.ToString(_open_data[0].L_star);
+                        i_isp.Text = Convert.ToString(_open_data[0].Isp);
+                        i_T0.Text = Convert.ToString(_open_data[0].T0);
+                        i_Molmasse.Text = Convert.ToString(_open_data[0].Mm);
+                        i_theta.Text = Convert.ToString(_open_data[0].Theta);
+
+                        NeuToolStripMenuItem_Click(sender, e);
+                }
+            }
+            System.Diagnostics.Debug.WriteLine("Open file");
+        }
+    }
+
+    public class Data
+    {
+        public double F { get; set; }
+        public double P0 { get; set; }
+        public double Pa { get; set; }
+        public double Kappa { get; set; }
+        public double L_star { get; set; }
+        public double Isp { get; set; }
+        public double T0 { get; set; }
+        public double Mm { get; set; }
+        public double Theta { get; set; }
     }
 }
