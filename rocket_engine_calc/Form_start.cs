@@ -27,7 +27,7 @@ namespace rocket_engine_calc
             double pa = Convert.ToDouble(i_aussendr.Text);
             double kappa = Convert.ToDouble(i_diabaten.Text);
             double l_star = Convert.ToDouble(i_char_laenge.Text);
-            double Isp = Convert.ToDouble(i_isp.Text);
+            //double Isp = Convert.ToDouble(i_isp.Text);
             double T0 = Convert.ToDouble(i_T0.Text);
             double Mm = Convert.ToDouble(i_Molmasse.Text);
             double theta = Convert.ToDouble(i_theta.Text);
@@ -40,6 +40,8 @@ namespace rocket_engine_calc
             double epsilon = Get_epsilon(pe, p0, kappa, Ma_e);
             //Gamma
             double Gamma = Get_Gamma(kappa);
+            //Spez. Impuls
+            double Isp = Get_Isp(g, kappa, R_star, Mm, T0, pe, p0);
             //Mass flow rate
             double massflow = Get_massflow(F, Isp, g);
             //pt
@@ -72,6 +74,8 @@ namespace rocket_engine_calc
             System.Diagnostics.Debug.WriteLine("ε = " + Convert.ToString(epsilon) + " [-]");
             o_gamma.Text = Convert.ToString(Gamma);
             System.Diagnostics.Debug.WriteLine("Γ = " + Convert.ToString(Gamma) + " [-]");
+            o_isp.Text = Convert.ToString(Isp);
+            System.Diagnostics.Debug.WriteLine("Isp = " + Convert.ToString(Isp) + " [s]");
             o_mdot.Text = Convert.ToString(massflow);
             System.Diagnostics.Debug.WriteLine("m. = " + Convert.ToString(massflow) + " [kg/s]");
             o_pt.Text = Convert.ToString(pt);
@@ -114,6 +118,11 @@ namespace rocket_engine_calc
             return p0 * Math.Pow(1 + ((kappa - 1) / 2), -kappa / (kappa - 1));
         }
 
+        private static double Get_Isp(double g, double kappa, double R_star, double Mm, double T0, double pe, double p0)
+        {
+            return 1 / g * Math.Sqrt(2 * kappa / (kappa - 1)) * Math.Sqrt(R_star / Mm * T0) * Math.Sqrt(1 - Math.Pow(pe / p0, (kappa - 1) / kappa));
+        }
+
         private static double Get_massflow(double F, double Isp, double g)
         {
             return F / (Isp * g);
@@ -142,7 +151,6 @@ namespace rocket_engine_calc
             i_aussendr.Text = "0";
             i_diabaten.Text = "0";
             i_char_laenge.Text = "0";
-            i_isp.Text = "0";
             i_T0.Text = "0";
             i_Molmasse.Text = "0";
             i_theta.Text = "0";
@@ -156,6 +164,7 @@ namespace rocket_engine_calc
             o_epsilon.Text = "---";
             o_gamma.Text = "---";
             o_Lc.Text = "---";
+            o_isp.Text = "---";
             o_mdot.Text = "---";
             o_pt.Text = "---";
             o_Tt.Text = "---";
@@ -185,7 +194,7 @@ namespace rocket_engine_calc
                 FileName = "unknown.recp",
                 Filter = "RE Calc Project|*.recp",
                 Title = "Speichern unter",
-                InitialDirectory = @"C:\",
+                //InitialDirectory = @"C:\",
                 RestoreDirectory = true,
                 DefaultExt = "recp"
             };
@@ -199,7 +208,6 @@ namespace rocket_engine_calc
                         Pa = Convert.ToDouble(i_aussendr.Text),
                         Kappa = Convert.ToDouble(i_diabaten.Text),
                         L_star = Convert.ToDouble(i_char_laenge.Text),
-                        Isp = Convert.ToDouble(i_isp.Text),
                         T0 = Convert.ToDouble(i_T0.Text),
                         Mm = Convert.ToDouble(i_Molmasse.Text),
                         Theta = Convert.ToDouble(i_theta.Text)
@@ -223,25 +231,22 @@ namespace rocket_engine_calc
             {
                 openFileDialog.Filter = "RE Calc Project|*.recp";
                 openFileDialog.Title = "Öffnen";
-                openFileDialog.InitialDirectory = @"C:\";
+                //openFileDialog.InitialDirectory = @"C:\";
                 openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     // read file into a string and deserialize JSON to a type
-                    Data [] _open_data = JsonConvert.DeserializeObject<Data[]>(File.ReadAllText(@openFileDialog.FileName));
-
-                        i_schub.Text = Convert.ToString(_open_data[0].F);
-                        i_brenndr.Text = Convert.ToString(_open_data[0].P0);
-                        i_aussendr.Text = Convert.ToString(_open_data[0].Pa);
-                        i_diabaten.Text = Convert.ToString(_open_data[0].Kappa);
-                        i_char_laenge.Text = Convert.ToString(_open_data[0].L_star);
-                        i_isp.Text = Convert.ToString(_open_data[0].Isp);
-                        i_T0.Text = Convert.ToString(_open_data[0].T0);
-                        i_Molmasse.Text = Convert.ToString(_open_data[0].Mm);
-                        i_theta.Text = Convert.ToString(_open_data[0].Theta);
-
+                    Data _open_data = JsonConvert.DeserializeObject<Data>(File.ReadAllText(@openFileDialog.FileName));
                         NeuToolStripMenuItem_Click(sender, e);
+                        i_schub.Text = Convert.ToString(_open_data.F);
+                        i_brenndr.Text = Convert.ToString(_open_data.P0);
+                        i_aussendr.Text = Convert.ToString(_open_data.Pa);
+                        i_diabaten.Text = Convert.ToString(_open_data.Kappa);
+                        i_char_laenge.Text = Convert.ToString(_open_data.L_star);
+                        i_T0.Text = Convert.ToString(_open_data.T0);
+                        i_Molmasse.Text = Convert.ToString(_open_data.Mm);
+                        i_theta.Text = Convert.ToString(_open_data.Theta);
                 }
             }
             System.Diagnostics.Debug.WriteLine("Open file");
@@ -255,7 +260,6 @@ namespace rocket_engine_calc
         public double Pa { get; set; }
         public double Kappa { get; set; }
         public double L_star { get; set; }
-        public double Isp { get; set; }
         public double T0 { get; set; }
         public double Mm { get; set; }
         public double Theta { get; set; }

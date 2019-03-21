@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RE Calc.exe" size="371200">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RE Calc.exe" size="372736">
       <assemblyIdentity name="RE Calc" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NMozQEgloOmQ3EN5XzeAz0PmtB5sp9VsVzTs06SK0VU=</dsig:DigestValue>
+        <dsig:DigestValue>TOpbfMmy4AGWQQFrIjeCFx6SscDa5y7/bpBFFeRR/jM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

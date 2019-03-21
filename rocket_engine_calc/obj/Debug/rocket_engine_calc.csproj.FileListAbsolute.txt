@@ -5,7 +5,15 @@ C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\RE Calc.exe.config
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\RE Calc.exe
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\RE Calc.pdb
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\RE Calc.exe.CodeAnalysisLog.xml
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\RE Calc.exe.lastcodeanalysissucceeded
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\RE Calc.exe
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\RE Calc.pdb
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\RE Calc.exe.manifest
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\RE Calc.application
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\Newtonsoft.Json.dll
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Debug\Newtonsoft.Json.xml
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\rocket_engine_calc.csprojAssemblyReference.cache
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\rocket_engine_calc.Form_about.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\RE Calc.exe.manifest
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\RE Calc.application
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Debug\rocket_engine_calc.csproj.CopyComplete
