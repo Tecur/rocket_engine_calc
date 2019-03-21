@@ -3,4 +3,4 @@
 
 Rocket Engine Calculator (RE Calc for short) is an simple program for calculating some important Parameters for Liquid-fuel Rocket Engines.
 
-[Project Website (German)](tecur.github.io/Projekte/RE_calc.html)
+[Project Website (German)](https://tecur.github.io/Projekte/RE_calc.html)
