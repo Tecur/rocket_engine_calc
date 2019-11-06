@@ -1,10 +1,10 @@
-name: .NET Framework
+name: Build
 
 on: [push]
 
 jobs:
   build:
-
+    name: .NET Framework
     runs-on: windows-latest
 
     steps:
