@@ -13,6 +13,10 @@ jobs:
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
       
-    - name: MSBuild
+    - name: MSBuild MLRuntime Release
       working-directory: ./rocket_engine_calc/MlRuntime
       run: msbuild MLRuntime.csproj -p:Configuration=Release
+
+    - name: MSBuild rocket_engine_calc Release
+      working-directory: ./rocket_engine_calc
+      run: msbuild rocket_engine_calc.csproj -p:Configuration=Release
