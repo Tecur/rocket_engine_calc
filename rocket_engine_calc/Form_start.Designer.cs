@@ -1065,11 +1065,13 @@
             // 
             resources.ApplyResources(this.problemMeldenToolStripMenuItem, "problemMeldenToolStripMenuItem");
             this.problemMeldenToolStripMenuItem.Name = "problemMeldenToolStripMenuItem";
+            this.problemMeldenToolStripMenuItem.Click += new System.EventHandler(this.problemMeldenToolStripMenuItem_Click);
             // 
             // vorschlagMachenToolStripMenuItem
             // 
             resources.ApplyResources(this.vorschlagMachenToolStripMenuItem, "vorschlagMachenToolStripMenuItem");
             this.vorschlagMachenToolStripMenuItem.Name = "vorschlagMachenToolStripMenuItem";
+            this.vorschlagMachenToolStripMenuItem.Click += new System.EventHandler(this.vorschlagMachenToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 

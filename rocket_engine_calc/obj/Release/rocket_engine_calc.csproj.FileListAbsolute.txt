@@ -29,3 +29,33 @@ C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Releas
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.CopyComplete
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.exe
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.pdb
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.exe.config
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.exe.manifest
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.application
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.exe
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.pdb
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\bin\Release\de-DE\RE Calc.resources.dll
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\bin\Release\en\RE Calc.resources.dll
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\bin\Release\Newtonsoft.Json.dll
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\bin\Release\MLRuntime.dll
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csprojAssemblyReference.cache
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_about.resources
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_settings.resources
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form.resources
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Properties.Resources.resources
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_about.de-DE.resources
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_about.en.resources
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_settings.de-DE.resources
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_settings.en.resources
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form.de-DE.resources
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form.en.resources
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Properties.Resources.de-DE.resources
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Properties.Resources.en.resources
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.GenerateResource.cache
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\de-DE\RE Calc.resources.dll
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\en\RE Calc.resources.dll
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.exe.manifest
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.application
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.CopyComplete
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.exe
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.pdb
