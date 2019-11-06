@@ -117,6 +117,42 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="_Displaying_Processor_Name" xml:space="preserve">
+    <value>Displaying Processor Name....</value>
+  </data>
+  <data name="Datei_öffnen" xml:space="preserve">
+    <value>Open file</value>
+  </data>
+  <data name="Öffnen" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Open_file" xml:space="preserve">
+    <value>Open file</value>
+  </data>
+  <data name="Saving_File_to" xml:space="preserve">
+    <value>Saving File to: </value>
+  </data>
+  <data name="Speichern_unter" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="Unable_to_open_link_that_was_c" xml:space="preserve">
+    <value>Unable to open the link.</value>
+  </data>
+  <data name="unknown_recp" xml:space="preserve">
+    <value>unnamed.recp</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="Ma_e" xml:space="preserve">
+    <value>Ma_e =</value>
+  </data>
+  <data name="Unable_to_open_link_that_was_c0" xml:space="preserve">
+    <value>Unable to open the link.</value>
+  </data>
+  <data name="Unable_to_open_link_that_was_c1" xml:space="preserve">
+    <value>Unable to open the link.</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="p_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\p_a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -124,17 +160,20 @@
   <data name="kappa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kappa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="A_e" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\A_e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Gamma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gamma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="V_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\V_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="epsilon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\epsilon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="D_t" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\D_t.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SaveStatusBar1_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SaveStatusBar1_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,9 +193,6 @@
   <data name="Question_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Question_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ma_e" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ma_e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Save_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,20 +202,20 @@
   <data name="T_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\T_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="epsilon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\epsilon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="A_e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A_e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="A_t" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\A_t.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="p_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\p_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="L_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\L_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Settings_12x_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings_12x_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="M" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="p_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="I_sp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\I_sp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,7 +235,7 @@
   <data name="F" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\F.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="L_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\L_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Mae" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mae.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

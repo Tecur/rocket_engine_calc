@@ -8,26 +8,28 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>rocket_engine_calc</RootNamespace>
     <AssemblyName>RE Calc</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>C:\Users\joshu\Documents\GitHub\rocket_engine_calc\Publish\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Background</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
+    <InstallUrl>\\localhost\c%24\Users\joshu\Documents\GitHub\rocket_engine_calc\Publish\</InstallUrl>
     <ErrorReportUrl>https://github.com/Tecur/rocket_engine_calc/issues</ErrorReportUrl>
     <ProductName>Rocket Engine Calc</ProductName>
     <PublisherName>Joshua Stoll</PublisherName>
-    <ApplicationRevision>8</ApplicationRevision>
-    <ApplicationVersion>0.2.0.%2a</ApplicationVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>0.2.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -72,9 +74,6 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -89,6 +88,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculator.cs" />
+    <Compile Include="Form_settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_settings.Designer.cs">
+      <DependentUpon>Form_settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_about.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,18 +109,50 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectLanguage.designer.cs">
+      <DependentUpon>SelectLanguage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form_about.de-DE.resx">
+      <DependentUpon>Form_about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_about.en.resx">
+      <DependentUpon>Form_about.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_about.resx">
       <DependentUpon>Form_about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_settings.de-DE.resx">
+      <DependentUpon>Form_settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_settings.en.resx">
+      <DependentUpon>Form_settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_settings.resx">
+      <DependentUpon>Form_settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_start.de-DE.resx">
+      <DependentUpon>Form_start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_start.en.resx">
+      <DependentUpon>Form_start.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_start.resx">
       <DependentUpon>Form_start.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de-DE.resx">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,6 +173,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\Mae.png" />
+    <Content Include="rocket_engine_calc_ml.xml" />
     <None Include="Resources\V_c.png" />
     <None Include="Resources\T_t.png" />
     <None Include="Resources\pt.png" />
@@ -177,6 +217,16 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <PublishFile Include="favicon.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
     <PublishFile Include="Resources\M.png">
       <Visible>False</Visible>
       <Group>
@@ -187,6 +237,17 @@
       <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="MlRuntime\MLRuntime.csproj">
+      <Project>{BC72E02F-E7E4-4FF2-8AA9-999C1A8BFC77}</Project>
+      <Name>MLRuntime</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.2</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

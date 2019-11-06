@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using rocket_engine_calc.Properties;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,158 +18,98 @@ namespace rocket_engine_calc
         public Form()
         {
             InitializeComponent();
+ 
+          this.Disposed += new System.EventHandler ( this.Form_Disposed );
+          MLRuntime.MLRuntime.LanguageChanged += new MLRuntime.MLRuntime.LanguageChangedDelegate ( ml_UpdateControls ) ;
         }
 
         private void B_calc_Click(object sender, EventArgs e)
         {
-            //Einlesen der Start-/Zielwerte
-            double F = Convert.ToDouble(i_schub.Text);
-            double p0 = Convert.ToDouble(i_brenndr.Text);
-            double pa = Convert.ToDouble(i_aussendr.Text);
-            double kappa = Convert.ToDouble(i_diabaten.Text);
-            double l_star = Convert.ToDouble(i_char_laenge.Text);
-            //double Isp = Convert.ToDouble(i_isp.Text);
-            double T0 = Convert.ToDouble(i_T0.Text);
-            double Mm = Convert.ToDouble(i_Molmasse.Text);
-            double theta = Convert.ToDouble(i_theta.Text);
-            double R_star = 8314.4598;
-            double pe = pa; //angepasste Düse
-            double g = 9.81;
-            //Mae
-            double Ma_e = Get_Ma_e(p0, pa, kappa);
-            //Epsilon Ae/At
-            double epsilon = Get_epsilon(pe, p0, kappa, Ma_e);
-            //Gamma
-            double Gamma = Get_Gamma(kappa);
-            //Spez. Impuls
-            double Isp = Get_Isp(g, kappa, R_star, Mm, T0, pe, p0);
-            //Mass flow rate
-            double massflow = Get_massflow(F, Isp, g);
-            //pt
-            double pt = Get_pt(p0, kappa);
-            //Tt
-            double Tt = Get_Tt(kappa, T0);
-            //At (in m^2)
-            double At = Get_At(kappa, Mm, R_star, massflow, pt, Tt);
-            //Ae (in m^2)
-            double Ae = Get_Ae(kappa, Ma_e, At);
-            //Dt (in cm)
-            double Dt = 2 * Math.Sqrt(At*10000 / Math.PI);
-            //De (in cm)
-            double De = 2 * Math.Sqrt(Ae*10000 / Math.PI);
-            //Vc (in cm^3)
-            double Vc = At * 10000 * l_star;
-            //Lc (in cm)
-            //Näherung zweiter Ordnung (mit Vorsicht zu betrachten, lieber eigene Erfahrungswerte nutzen)
-            double Lc = Math.Exp(0.029*Math.Pow(Math.Log(Dt),2) +0.47*Math.Log(Dt) +1.94);
-            //Dc (in cm)
-            //Finden durch Iteration
-            double Dc = 0;
-            for(int i = 0; i < 4; i++) {
-                Dc = Math.Sqrt((Math.Pow(Dt, 3) + (24 / Math.PI) * Math.Tan(((Math.PI / 180) * theta)) * Vc) / (Dc + 6 * Math.Tan(((Math.PI / 180) * theta)) * Lc));
-            }
+            int digitcount = 2;
+
+            Calculator _calculator = new Calculator(
+                Convert.ToDouble(i_schub.Text),
+                Convert.ToDouble(i_brenndr.Text),
+                Convert.ToDouble(i_aussendr.Text),
+                Convert.ToDouble(i_diabaten.Text),
+                Convert.ToDouble(i_char_laenge.Text),
+                Convert.ToDouble(i_T0.Text),
+                Convert.ToDouble(i_Molmasse.Text),
+                Convert.ToDouble(i_theta.Text)
+                );
+
+            //Berechnen
+            _calculator.Calculate();
             //Ergebnisse anzeigen
-            o_mae.Text = Convert.ToString(Ma_e);
-            System.Diagnostics.Debug.WriteLine("Ma_e = " + Convert.ToString(Ma_e) + " [-]");
-            o_epsilon.Text = Convert.ToString(epsilon);
-            System.Diagnostics.Debug.WriteLine("ε = " + Convert.ToString(epsilon) + " [-]");
-            o_gamma.Text = Convert.ToString(Gamma);
-            System.Diagnostics.Debug.WriteLine("Γ = " + Convert.ToString(Gamma) + " [-]");
-            o_isp.Text = Convert.ToString(Isp);
-            System.Diagnostics.Debug.WriteLine("Isp = " + Convert.ToString(Isp) + " [s]");
-            o_mdot.Text = Convert.ToString(massflow);
-            System.Diagnostics.Debug.WriteLine("m. = " + Convert.ToString(massflow) + " [kg/s]");
-            o_pt.Text = Convert.ToString(pt);
-            System.Diagnostics.Debug.WriteLine("pt = " + Convert.ToString(pt) + " [Pa]");
-            o_Tt.Text = Convert.ToString(Tt);
-            System.Diagnostics.Debug.WriteLine("Tt = " + Convert.ToString(Tt) + " [K]");
-            o_At.Text = Convert.ToString((At*10000));
-            System.Diagnostics.Debug.WriteLine("At = " + Convert.ToString((At*10000)) + " [cm²]");
-            o_Ae.Text = Convert.ToString((Ae*10000));
-            System.Diagnostics.Debug.WriteLine("Ae = " + Convert.ToString((Ae*10000)) + " [cm²]");
-            o_Dt.Text = Convert.ToString(Dt);
-            System.Diagnostics.Debug.WriteLine("Dt = " + Convert.ToString(Dt) + " [cm]");
-            o_De.Text = Convert.ToString(De);
-            System.Diagnostics.Debug.WriteLine("De = " + Convert.ToString(De) + " [cm]");
-            o_Dc.Text = Convert.ToString(Dc);
-            System.Diagnostics.Debug.WriteLine("Dc = " + Convert.ToString(Dc) + " [cm]");
-            o_Vc.Text = Convert.ToString(Vc);
-            System.Diagnostics.Debug.WriteLine("Vc = " + Convert.ToString(Vc) + " [cm³]");
-            o_Lc.Text = Convert.ToString(Lc);
-            System.Diagnostics.Debug.WriteLine("Lc = " + Convert.ToString(Lc) + " [cm]");
+            o_mae.Text = Convert.ToString(_calculator.Get_Ma_e(digitcount));
+            System.Diagnostics.Debug.WriteLine("Ma_e = " + Convert.ToString(_calculator.Get_Ma_e(digitcount)) + " [-]"); //MLHIDE
+            o_epsilon.Text = Convert.ToString(_calculator.Get_epsilon(digitcount));
+            System.Diagnostics.Debug.WriteLine("ε = " + Convert.ToString(_calculator.Get_epsilon(digitcount)) + " [-]"); //MLHIDE
+            o_gamma.Text = Convert.ToString(_calculator.Get_Gamma(digitcount));
+            System.Diagnostics.Debug.WriteLine("Γ = " + Convert.ToString(_calculator.Get_Gamma(digitcount)) + " [-]"); //MLHIDE
+            o_isp.Text = Convert.ToString(_calculator.Get_Isp(digitcount));
+            System.Diagnostics.Debug.WriteLine("Isp = " + Convert.ToString(_calculator.Get_Isp(digitcount)) + " [s]"); //MLHIDE
+            o_mdot.Text = Convert.ToString(_calculator.Get_massflow(digitcount));
+            System.Diagnostics.Debug.WriteLine("m. = " + Convert.ToString(_calculator.Get_massflow(digitcount)) + " [kg/s]"); //MLHIDE
+            o_pt.Text = Convert.ToString(_calculator.Get_pt(digitcount));
+            System.Diagnostics.Debug.WriteLine("pt = " + Convert.ToString(_calculator.Get_pt(digitcount)) + " [Pa]"); //MLHIDE
+            o_Tt.Text = Convert.ToString(_calculator.Get_Tt(digitcount));
+            System.Diagnostics.Debug.WriteLine("Tt = " + Convert.ToString(_calculator.Get_Tt(digitcount)) + " [K]"); //MLHIDE
+            o_At.Text = Convert.ToString(_calculator.Get_At(digitcount) * 10000);
+            System.Diagnostics.Debug.WriteLine("At = " + Convert.ToString(_calculator.Get_At(digitcount) * 10000) + " [cm²]"); //MLHIDE
+            o_Ae.Text = Convert.ToString(_calculator.Get_Ae(digitcount) * 10000);
+            System.Diagnostics.Debug.WriteLine("Ae = " + Convert.ToString(_calculator.Get_Ae(digitcount) * 10000) + " [cm²]"); //MLHIDE
+            o_Dt.Text = Convert.ToString(_calculator.Get_Dt(digitcount));
+            System.Diagnostics.Debug.WriteLine("Dt = " + Convert.ToString(_calculator.Get_Dt(digitcount)) + " [cm]"); //MLHIDE
+            o_De.Text = Convert.ToString(_calculator.Get_De(digitcount));
+            System.Diagnostics.Debug.WriteLine("De = " + Convert.ToString(_calculator.Get_De(digitcount)) + " [cm]"); //MLHIDE
+            o_Dc.Text = Convert.ToString(_calculator.Get_Dc(digitcount));
+            System.Diagnostics.Debug.WriteLine("Dc = " + Convert.ToString(_calculator.Get_Dc(digitcount)) + " [cm]"); //MLHIDE
+            o_Vc.Text = Convert.ToString(_calculator.Get_Vc(digitcount));
+            System.Diagnostics.Debug.WriteLine("Vc = " + Convert.ToString(_calculator.Get_Vc(digitcount)) + " [cm³]"); //MLHIDE
+            o_Lc.Text = Convert.ToString(_calculator.Get_Lc(digitcount));
+            System.Diagnostics.Debug.WriteLine("Lc = " + Convert.ToString(_calculator.Get_Lc(digitcount)) + " [cm]"); //MLHIDE
+
+            //Zeichnen
+            SolidBrush myBrush = new SolidBrush(Color.Red);
+            Graphics formGraphics;
+            formGraphics = this.CreateGraphics();
+            formGraphics.FillRectangle(myBrush, new Rectangle(0, 0, 200, 300));
+
+            myBrush.Dispose();
+            formGraphics.Dispose();
+
+            
         }
 
-        private static double Get_Ae(double kappa, double Ma_e, double At)
-        {
-            return At / Ma_e * Math.Pow((1 + ((kappa - 1) / 2 * Math.Pow(Ma_e, 2))) / ((kappa + 1) / 2), (kappa + 1) / (2 * (kappa - 1)));
-        }
-
-        private static double Get_At(double kappa, double Mm, double R_star, double massflow, double pt, double Tt)
-        {
-            return (massflow / pt) * Math.Sqrt((R_star * Tt) / (Mm * kappa));
-        }
-
-        private static double Get_Tt(double kappa, double T0)
-        {
-            return T0 / (1 + ((kappa - 1) / 2));
-        }
-
-        private static double Get_pt(double p0, double kappa)
-        {
-            return p0 * Math.Pow(1 + ((kappa - 1) / 2), -kappa / (kappa - 1));
-        }
-
-        private static double Get_Isp(double g, double kappa, double R_star, double Mm, double T0, double pe, double p0)
-        {
-            return 1 / g * Math.Sqrt(2 * kappa / (kappa - 1)) * Math.Sqrt(R_star / Mm * T0) * Math.Sqrt(1 - Math.Pow(pe / p0, (kappa - 1) / kappa));
-        }
-
-        private static double Get_massflow(double F, double Isp, double g)
-        {
-            return F / (Isp * g);
-        }
-
-        private static double Get_Gamma(double kappa)
-        {
-            return Math.Sqrt(kappa * Math.Pow(2 / (kappa + 1), (kappa + 1) / (kappa - 1)));
-        }
-
-        private static double Get_epsilon(double pe, double p0, double kappa, double Ma_e)
-        {
-            return (1/Ma_e)*Math.Pow((2/(kappa+1))*(1+((kappa-1)/2)*Math.Pow(Ma_e,2)),(kappa+1)/(2*(kappa-1)));
-        }
-
-        private static double Get_Ma_e(double p0, double pa, double kappa)
-        {
-            return Math.Sqrt(2 / (kappa - 1) * (Math.Pow(p0 / pa, (kappa - 1) / kappa) - 1));
-        }
+        
 
         private void NeuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Neu
-            i_schub.Text = "0";
-            i_brenndr.Text = "0";
-            i_aussendr.Text = "0";
-            i_diabaten.Text = "0";
-            i_char_laenge.Text = "0";
-            i_T0.Text = "0";
-            i_Molmasse.Text = "0";
-            i_theta.Text = "0";
+            i_schub.Text = "0";                                       //MLHIDE
+            i_brenndr.Text = "0";                                     //MLHIDE
+            i_aussendr.Text = "0";                                    //MLHIDE
+            i_diabaten.Text = "0";                                    //MLHIDE
+            i_char_laenge.Text = "0";                                 //MLHIDE
+            i_T0.Text = "0";                                          //MLHIDE
+            i_Molmasse.Text = "0";                                    //MLHIDE
+            i_theta.Text = "0";                                       //MLHIDE
 
-            o_mae.Text = "---";
-            o_Ae .Text = "---";
-            o_At.Text = "---";
-            o_Dc.Text = "---";
-            o_De.Text = "---";
-            o_Dt.Text = "---";
-            o_epsilon.Text = "---";
-            o_gamma.Text = "---";
-            o_Lc.Text = "---";
-            o_isp.Text = "---";
-            o_mdot.Text = "---";
-            o_pt.Text = "---";
-            o_Tt.Text = "---";
-            o_Vc.Text = "---";
+            o_mae.Text = "---";                                       //MLHIDE
+            o_Ae .Text = "---";                                       //MLHIDE
+            o_At.Text = "---";                                        //MLHIDE
+            o_Dc.Text = "---";                                        //MLHIDE
+            o_De.Text = "---";                                        //MLHIDE
+            o_Dt.Text = "---";                                        //MLHIDE
+            o_epsilon.Text = "---";                                   //MLHIDE
+            o_gamma.Text = "---";                                     //MLHIDE
+            o_Lc.Text = "---";                                        //MLHIDE
+            o_isp.Text = "---";                                       //MLHIDE
+            o_mdot.Text = "---";                                      //MLHIDE
+            o_pt.Text = "---";                                        //MLHIDE
+            o_Tt.Text = "---";                                        //MLHIDE
+            o_Vc.Text = "---";                                        //MLHIDE
 
 
         }
@@ -191,12 +132,12 @@ namespace rocket_engine_calc
             // Displays a SaveFileDialog so the user can save  
             SaveFileDialog saveFileDialog1 = new SaveFileDialog
             {
-                FileName = "unknown.recp",
-                Filter = "RE Calc Project|*.recp",
-                Title = "Speichern unter",
+                FileName = Resources.unknown_recp,
+                Filter = "RE Calc Project|*.recp",                    //MLHIDE
+                Title = Resources.Speichern_unter,
                 //InitialDirectory = @"C:\",
                 RestoreDirectory = true,
-                DefaultExt = "recp"
+                DefaultExt = "recp"                                   //MLHIDE
             };
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -216,7 +157,7 @@ namespace rocket_engine_calc
                 //open file stream
                 using (StreamWriter file = File.CreateText(@saveFileDialog1.FileName))
                 {
-                    System.Diagnostics.Debug.WriteLine("Saving File to: " + saveFileDialog1.FileName);
+                    System.Diagnostics.Debug.WriteLine(Resources.Saving_File_to + saveFileDialog1.FileName); //MLHIDE
 
                     // serialize JSON directly to a file
                     JsonSerializer serializer = new JsonSerializer();
@@ -229,8 +170,8 @@ namespace rocket_engine_calc
         {         
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Filter = "RE Calc Project|*.recp";
-                openFileDialog.Title = "Öffnen";
+                openFileDialog.Filter = "RE Calc Project|*.recp";     //MLHIDE
+                openFileDialog.Title = Resources.Öffnen;
                 //openFileDialog.InitialDirectory = @"C:\";
                 openFileDialog.RestoreDirectory = true;
 
@@ -249,10 +190,74 @@ namespace rocket_engine_calc
                         i_theta.Text = Convert.ToString(_open_data.Theta);
                 }
             }
-            System.Diagnostics.Debug.WriteLine("Open file");
+            System.Diagnostics.Debug.WriteLine(Resources.Datei_öffnen);          //MLHIDE
+        }
+      protected virtual void ml_UpdateControls()
+      {
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager ( typeof ( Form_start ) );
+        B_calc.Text = resources.GetString("B_calc.Text") ;
+        beendenToolStripMenuItem.Text = resources.GetString("beendenToolStripMenuItem.Text") ;
+        einstellungenToolStripMenuItem.Text = resources.GetString("einstellungenToolStripMenuItem.Text") ;
+        gB_Zielwerte.Text = resources.GetString("gB_Zielwerte.Text") ;
+        groupBox1.Text = resources.GetString("groupBox1.Text") ;
+        hilfeAnzeigenToolStripMenuItem.Text = resources.GetString("hilfeAnzeigenToolStripMenuItem.Text") ;
+        hilfeToolStripMenuItem.Text = resources.GetString("hilfeToolStripMenuItem.Text") ;
+        label1.Text = resources.GetString("label1.Text") ;
+        label11.Text = resources.GetString("label11.Text") ;
+        label12.Text = resources.GetString("label12.Text") ;
+        label13.Text = resources.GetString("label13.Text") ;
+        label15.Text = resources.GetString("label15.Text") ;
+        label19.Text = resources.GetString("label19.Text") ;
+        label2.Text = resources.GetString("label2.Text") ;
+        label21.Text = resources.GetString("label21.Text") ;
+        label22.Text = resources.GetString("label22.Text") ;
+        label23.Text = resources.GetString("label23.Text") ;
+        label24.Text = resources.GetString("label24.Text") ;
+        label25.Text = resources.GetString("label25.Text") ;
+        label26.Text = resources.GetString("label26.Text") ;
+        label31.Text = resources.GetString("label31.Text") ;
+        label37.Text = resources.GetString("label37.Text") ;
+        label38.Text = resources.GetString("label38.Text") ;
+        label39.Text = resources.GetString("label39.Text") ;
+        label40.Text = resources.GetString("label40.Text") ;
+        label45.Text = resources.GetString("label45.Text") ;
+        label5.Text = resources.GetString("label5.Text") ;
+        label6.Text = resources.GetString("label6.Text") ;
+        label7.Text = resources.GetString("label7.Text") ;
+        menu_Menu.Text = resources.GetString("menu_Menu.Text") ;
+        neuToolStripMenuItem.Text = resources.GetString("neuToolStripMenuItem.Text") ;
+        öffnenToolStripMenuItem.Text = resources.GetString("öffnenToolStripMenuItem.Text") ;
+        problemMeldenToolStripMenuItem.Text = resources.GetString("problemMeldenToolStripMenuItem.Text") ;
+        speichernToolStripMenuItem.Text = resources.GetString("speichernToolStripMenuItem.Text") ;
+        toolStripMenuItem1.Text = resources.GetString("toolStripMenuItem1.Text") ;
+        toolStripMenuItem2.Text = resources.GetString("toolStripMenuItem2.Text") ;
+        toolStripMenuItem3.Text = resources.GetString("toolStripMenuItem3.Text") ;
+        überRECalcToolStripMenuItem.Text = resources.GetString("überRECalcToolStripMenuItem.Text") ;
+        vorschlagMachenToolStripMenuItem.Text = resources.GetString("vorschlagMachenToolStripMenuItem.Text") ;
+      }
+
+      public void Form_Disposed ( object sender, System.EventArgs e )
+      {
+        
+        MLRuntime.MLRuntime.LanguageChanged -= new MLRuntime.MLRuntime.LanguageChangedDelegate ( ml_UpdateControls ) ;
+      }
+
+        private void EinstellungenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_settings f = new Form_settings();
+            f.Show();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
         }
     }
 
+    internal class Form_start
+    {
+    }
+    
     public class Data
     {
         public double F { get; set; }

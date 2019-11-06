@@ -36,7 +36,7 @@ namespace rocket_engine_calc
             // Form
             // 
             this.ClientSize = new System.Drawing.Size(274, 229);
-            this.Name = "Form_about";
+            this.Name = "Form_about";                                 //MLHIDE
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,29 +75,20 @@ namespace rocket_engine_calc
             // 
             // notifyIcon1
             // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
+            resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
             // 
             // l_header
             // 
-            this.l_header.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.l_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.l_header, "l_header");
             this.l_header.ForeColor = System.Drawing.Color.Teal;
-            this.l_header.Location = new System.Drawing.Point(3, 45);
             this.l_header.Name = "l_header";
-            this.l_header.Size = new System.Drawing.Size(591, 55);
-            this.l_header.TabIndex = 0;
-            this.l_header.Text = "Rocket Engine Calculator";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.l_header);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(594, 103);
-            this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
@@ -106,96 +97,61 @@ namespace rocket_engine_calc
             this.panel2.Controls.Add(this.lL_Website);
             this.panel2.Controls.Add(this.lL_Repo);
             this.panel2.Controls.Add(this.l_Links);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(384, 103);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(210, 355);
-            this.panel2.TabIndex = 2;
             // 
             // B_OK
             // 
-            this.B_OK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.B_OK.Location = new System.Drawing.Point(22, 304);
+            resources.ApplyResources(this.B_OK, "B_OK");
             this.B_OK.Name = "B_OK";
-            this.B_OK.Size = new System.Drawing.Size(176, 39);
-            this.B_OK.TabIndex = 4;
-            this.B_OK.Text = "OK";
             this.B_OK.UseVisualStyleBackColor = true;
             this.B_OK.Click += new System.EventHandler(this.B_OK_Click);
             // 
             // lL_Licence
             // 
-            this.lL_Licence.AutoSize = true;
-            this.lL_Licence.Location = new System.Drawing.Point(7, 93);
+            resources.ApplyResources(this.lL_Licence, "lL_Licence");
             this.lL_Licence.Name = "lL_Licence";
-            this.lL_Licence.Size = new System.Drawing.Size(200, 25);
-            this.lL_Licence.TabIndex = 3;
             this.lL_Licence.TabStop = true;
-            this.lL_Licence.Text = "Lizenzbedingungen";
             this.lL_Licence.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LL_Licence_LinkClicked);
             // 
             // lL_Website
             // 
-            this.lL_Website.AutoSize = true;
-            this.lL_Website.Location = new System.Drawing.Point(4, 64);
+            resources.ApplyResources(this.lL_Website, "lL_Website");
             this.lL_Website.Name = "lL_Website";
-            this.lL_Website.Size = new System.Drawing.Size(181, 25);
-            this.lL_Website.TabIndex = 2;
             this.lL_Website.TabStop = true;
-            this.lL_Website.Text = "Joshua\'s Website";
             this.lL_Website.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LL_Website_LinkClicked);
             // 
             // lL_Repo
             // 
-            this.lL_Repo.AutoSize = true;
-            this.lL_Repo.Location = new System.Drawing.Point(7, 35);
+            resources.ApplyResources(this.lL_Repo, "lL_Repo");
             this.lL_Repo.Name = "lL_Repo";
-            this.lL_Repo.Size = new System.Drawing.Size(187, 25);
-            this.lL_Repo.TabIndex = 1;
             this.lL_Repo.TabStop = true;
-            this.lL_Repo.Text = "GitHub Repository";
             this.lL_Repo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LL_Repo_LinkClicked);
             // 
             // l_Links
             // 
-            this.l_Links.AutoSize = true;
-            this.l_Links.Dock = System.Windows.Forms.DockStyle.Top;
-            this.l_Links.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_Links.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.l_Links, "l_Links");
             this.l_Links.Name = "l_Links";
-            this.l_Links.Size = new System.Drawing.Size(83, 31);
-            this.l_Links.TabIndex = 0;
-            this.l_Links.Text = "Links";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.L_desc);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 103);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(384, 355);
-            this.panel3.TabIndex = 3;
             // 
             // L_desc
             // 
-            this.L_desc.AutoSize = true;
-            this.L_desc.Location = new System.Drawing.Point(4, 7);
+            resources.ApplyResources(this.L_desc, "L_desc");
             this.L_desc.Name = "L_desc";
-            this.L_desc.Size = new System.Drawing.Size(223, 25);
-            this.L_desc.TabIndex = 0;
-            this.L_desc.Text = "-Loading Version Info-";
             // 
             // Form_about
             // 
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(594, 458);
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_about";
             this.ShowIcon = false;
-            this.Text = "Über RE Calc";
             this.Load += new System.EventHandler(this.Form_about_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

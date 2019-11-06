@@ -22,7 +22,7 @@ namespace rocket_engine_calc.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace rocket_engine_calc.Properties {
         ///   Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("rocket_engine_calc.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace rocket_engine_calc.Properties {
         ///   Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,9 +61,18 @@ namespace rocket_engine_calc.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Displaying Processor Name.... ähnelt.
+        /// </summary>
+        public static string _Displaying_Processor_Name {
+            get {
+                return ResourceManager.GetString("_Displaying_Processor_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_e {
+        public static System.Drawing.Bitmap A_e {
             get {
                 object obj = ResourceManager.GetObject("A_e", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +82,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap A_t {
+        public static System.Drawing.Bitmap A_t {
             get {
                 object obj = ResourceManager.GetObject("A_t", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +92,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap D_c {
+        public static System.Drawing.Bitmap D_c {
             get {
                 object obj = ResourceManager.GetObject("D_c", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +102,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap D_e {
+        public static System.Drawing.Bitmap D_e {
             get {
                 object obj = ResourceManager.GetObject("D_e", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +112,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap D_t {
+        public static System.Drawing.Bitmap D_t {
             get {
                 object obj = ResourceManager.GetObject("D_t", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -111,9 +120,18 @@ namespace rocket_engine_calc.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Open file ähnelt.
+        /// </summary>
+        public static string Datei_öffnen {
+            get {
+                return ResourceManager.GetString("Datei_öffnen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap epsilon {
+        public static System.Drawing.Bitmap epsilon {
             get {
                 object obj = ResourceManager.GetObject("epsilon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +141,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap F {
+        public static System.Drawing.Bitmap F {
             get {
                 object obj = ResourceManager.GetObject("F", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +151,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Gamma {
+        public static System.Drawing.Bitmap Gamma {
             get {
                 object obj = ResourceManager.GetObject("Gamma", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +161,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap I_sp {
+        public static System.Drawing.Bitmap I_sp {
             get {
                 object obj = ResourceManager.GetObject("I_sp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +171,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kappa {
+        public static System.Drawing.Bitmap kappa {
             get {
                 object obj = ResourceManager.GetObject("kappa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +181,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap L_c {
+        public static System.Drawing.Bitmap L_c {
             get {
                 object obj = ResourceManager.GetObject("L_c", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +191,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Lstar {
+        public static System.Drawing.Bitmap Lstar {
             get {
                 object obj = ResourceManager.GetObject("Lstar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +201,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap M {
+        public static System.Drawing.Bitmap M {
             get {
                 object obj = ResourceManager.GetObject("M", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +211,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap m_dot {
+        public static System.Drawing.Bitmap m_dot {
             get {
                 object obj = ResourceManager.GetObject("m_dot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -201,11 +219,20 @@ namespace rocket_engine_calc.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ma_e = ähnelt.
+        /// </summary>
+        public static string Ma_e {
+            get {
+                return ResourceManager.GetString("Ma_e", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ma_e {
+        public static System.Drawing.Bitmap Mae {
             get {
-                object obj = ResourceManager.GetObject("Ma_e", resourceCulture);
+                object obj = ResourceManager.GetObject("Mae", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,7 +240,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap NewFile_16x {
+        public static System.Drawing.Bitmap NewFile_16x {
             get {
                 object obj = ResourceManager.GetObject("NewFile_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -221,9 +248,27 @@ namespace rocket_engine_calc.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Open ähnelt.
+        /// </summary>
+        public static string Öffnen {
+            get {
+                return ResourceManager.GetString("Öffnen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Open file ähnelt.
+        /// </summary>
+        public static string Open_file {
+            get {
+                return ResourceManager.GetString("Open_file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap OpenFile_16x {
+        public static System.Drawing.Bitmap OpenFile_16x {
             get {
                 object obj = ResourceManager.GetObject("OpenFile_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -233,7 +278,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap p_a {
+        public static System.Drawing.Bitmap p_a {
             get {
                 object obj = ResourceManager.GetObject("p_a", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -243,7 +288,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap p_c {
+        public static System.Drawing.Bitmap p_c {
             get {
                 object obj = ResourceManager.GetObject("p_c", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -253,7 +298,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pt {
+        public static System.Drawing.Bitmap pt {
             get {
                 object obj = ResourceManager.GetObject("pt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -263,7 +308,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Question_16x {
+        public static System.Drawing.Bitmap Question_16x {
             get {
                 object obj = ResourceManager.GetObject("Question_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -273,7 +318,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Save_16x {
+        public static System.Drawing.Bitmap Save_16x {
             get {
                 object obj = ResourceManager.GetObject("Save_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -283,7 +328,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SaveStatusBar1_16x {
+        public static System.Drawing.Bitmap SaveStatusBar1_16x {
             get {
                 object obj = ResourceManager.GetObject("SaveStatusBar1_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -291,9 +336,18 @@ namespace rocket_engine_calc.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Saving File to:  ähnelt.
+        /// </summary>
+        public static string Saving_File_to {
+            get {
+                return ResourceManager.GetString("Saving_File_to", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Settings_12x_16x {
+        public static System.Drawing.Bitmap Settings_12x_16x {
             get {
                 object obj = ResourceManager.GetObject("Settings_12x_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -301,9 +355,18 @@ namespace rocket_engine_calc.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Save As ähnelt.
+        /// </summary>
+        public static string Speichern_unter {
+            get {
+                return ResourceManager.GetString("Speichern_unter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap T_c {
+        public static System.Drawing.Bitmap T_c {
             get {
                 object obj = ResourceManager.GetObject("T_c", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -313,7 +376,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap T_t {
+        public static System.Drawing.Bitmap T_t {
             get {
                 object obj = ResourceManager.GetObject("T_t", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -323,7 +386,7 @@ namespace rocket_engine_calc.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap theta {
+        public static System.Drawing.Bitmap theta {
             get {
                 object obj = ResourceManager.GetObject("theta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -331,12 +394,57 @@ namespace rocket_engine_calc.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Unable to open the link. ähnelt.
+        /// </summary>
+        public static string Unable_to_open_link_that_was_c {
+            get {
+                return ResourceManager.GetString("Unable_to_open_link_that_was_c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Unable to open the link. ähnelt.
+        /// </summary>
+        public static string Unable_to_open_link_that_was_c0 {
+            get {
+                return ResourceManager.GetString("Unable_to_open_link_that_was_c0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Unable to open the link. ähnelt.
+        /// </summary>
+        public static string Unable_to_open_link_that_was_c1 {
+            get {
+                return ResourceManager.GetString("Unable_to_open_link_that_was_c1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die unnamed.recp ähnelt.
+        /// </summary>
+        public static string unknown_recp {
+            get {
+                return ResourceManager.GetString("unknown_recp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap V_c {
+        public static System.Drawing.Bitmap V_c {
             get {
                 object obj = ResourceManager.GetObject("V_c", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Version: ähnelt.
+        /// </summary>
+        public static string Version {
+            get {
+                return ResourceManager.GetString("Version", resourceCulture);
             }
         }
     }

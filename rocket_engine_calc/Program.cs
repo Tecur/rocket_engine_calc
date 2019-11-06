@@ -16,6 +16,15 @@ namespace rocket_engine_calc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+      //Sprachauswahl-Formular anzeigen
+      MultiLang.SelectLanguage frmLang = new MultiLang.SelectLanguage() ;
+      frmLang.LoadSettingsAndShow() ;
+      frmLang.Dispose() ;
+      frmLang = null ;
+
+     
+
             Application.Run(new Form());
         }
     }

@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rocket_engine_calc", "rocket_engine_calc\rocket_engine_calc.csproj", "{F434BE3B-E068-4BB6-AD9F-C312A834215B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLRuntime", "rocket_engine_calc\MlRuntime\MLRuntime.csproj", "{BC72E02F-E7E4-4FF2-8AA9-999C1A8BFC77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rocket_engine_calc_core", "rocket_engine_calc_core\rocket_engine_calc_core.csproj", "{3E9B5B70-C4B2-44FD-B752-B2AAC10B70C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F434BE3B-E068-4BB6-AD9F-C312A834215B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F434BE3B-E068-4BB6-AD9F-C312A834215B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F434BE3B-E068-4BB6-AD9F-C312A834215B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC72E02F-E7E4-4FF2-8AA9-999C1A8BFC77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC72E02F-E7E4-4FF2-8AA9-999C1A8BFC77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC72E02F-E7E4-4FF2-8AA9-999C1A8BFC77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC72E02F-E7E4-4FF2-8AA9-999C1A8BFC77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E9B5B70-C4B2-44FD-B752-B2AAC10B70C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9B5B70-C4B2-44FD-B752-B2AAC10B70C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9B5B70-C4B2-44FD-B752-B2AAC10B70C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9B5B70-C4B2-44FD-B752-B2AAC10B70C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

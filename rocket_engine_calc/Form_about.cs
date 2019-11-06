@@ -1,4 +1,5 @@
-﻿using System;
+﻿using rocket_engine_calc.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,11 +19,14 @@ namespace rocket_engine_calc
         public Form_about()
         {
             InitializeComponent();
+         
+          this.Disposed += new System.EventHandler ( this.Form_about_Disposed );
+          MLRuntime.MLRuntime.LanguageChanged += new MLRuntime.MLRuntime.LanguageChangedDelegate ( ml_UpdateControls ) ;
         }
 
         private void LL_Website_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string url = "https://tecur.github.io/";
+            string url = "https://tecur.github.io/";                  //MLHIDE
             try
             {
 
@@ -30,7 +34,7 @@ namespace rocket_engine_calc
             }
             catch (Exception)
             {
-                MessageBox.Show("Unable to open link that was clicked.");
+                MessageBox.Show(Resources.Unable_to_open_link_that_was_c);
             }
         }
 
@@ -46,27 +50,27 @@ namespace rocket_engine_calc
 
         private void LL_Licence_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string url = "https://raw.githubusercontent.com/Tecur/rocket_engine_calc/master/LICENSE.md";
+            string url = "https://raw.githubusercontent.com/Tecur/rocket_engine_calc/master/LICENSE.md"; //MLHIDE
             try
             {
                 VisitLink(url);
             }
             catch (Exception)
             {
-                MessageBox.Show("Unable to open link that was clicked.");
+                MessageBox.Show(Resources.Unable_to_open_link_that_was_c0);
             }
         }
 
         private void LL_Repo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string url = "https://github.com/Tecur/rocket_engine_calc";
+            string url = "https://github.com/Tecur/rocket_engine_calc"; //MLHIDE
             try
             {
                 VisitLink(url);
             }
             catch (Exception)
             {
-                MessageBox.Show("Unable to open link that was clicked.");
+                MessageBox.Show(Resources.Unable_to_open_link_that_was_c1);
             }
         }
         
@@ -88,35 +92,37 @@ namespace rocket_engine_calc
             private static string GetOperatingSystemInfo()
             {
                 //Create an object of ManagementObjectSearcher class and pass query as parameter.
-                ManagementObjectSearcher mos = new ManagementObjectSearcher("select * from Win32_OperatingSystem");
+                ManagementObjectSearcher mos = new ManagementObjectSearcher("select * from Win32_OperatingSystem"); //MLHIDE
                 string re = "";
                 foreach (ManagementObject managementObject in mos.Get())
                 {
-                    if (managementObject["Caption"] != null)
+                    if (managementObject["Caption"] != null)          //MLHIDE
                     {
-                        re += ("OS Name  :  " + managementObject["Caption"].ToString());   //Display operating system caption
+                        re += ("OS: " + managementObject["Caption"].ToString());   //Display operating system caption //MLHIDE
                     }
-                    if (managementObject["OSArchitecture"] != null)
+                    if (managementObject["OSArchitecture"] != null)   //MLHIDE
                     {
-                        re += (Environment.NewLine +"OS Architektur  :  " + managementObject["OSArchitecture"].ToString());   //Display operating system architecture.
+                        re += (Environment.NewLine +"OS Architecture:" + managementObject["OSArchitecture"].ToString());   //Display operating system architecture. //MLHIDE
                     }
-                    if (managementObject["CSDVersion"] != null)
+                    if (managementObject["CSDVersion"] != null)       //MLHIDE
                     {
-                        re += (Environment.NewLine +"OS Service Pack   :  " + managementObject["CSDVersion"].ToString());     //Display operating system version.
+                        re += (Environment.NewLine +"OS Service Pack: " + managementObject["CSDVersion"].ToString());     //Display operating system version. //MLHIDE
                     }
                 }
                 return re;
             }
             private static string GetProcessorInfo()
             {
-                Console.WriteLine("\n\nDisplaying Processor Name....");
-                RegistryKey processor_name = Registry.LocalMachine.OpenSubKey(@"Hardware\Description\System\CentralProcessor\0", RegistryKeyPermissionCheck.ReadSubTree);   //This registry entry contains entry for processor info.
+                Console.WriteLine(@"
+
+Displaying Processor Name....");
+                RegistryKey processor_name = Registry.LocalMachine.OpenSubKey(@"Hardware\Description\System\CentralProcessor\0", RegistryKeyPermissionCheck.ReadSubTree);   //This registry entry contains entry for processor info. //MLHIDE
 
                 if (processor_name != null)
                 {
-                    if (processor_name.GetValue("ProcessorNameString") != null)
+                    if (processor_name.GetValue("ProcessorNameString") != null) //MLHIDE
                     {
-                        return "CPU: " +Convert.ToString(processor_name.GetValue("ProcessorNameString"));   //Display processor ingo.
+                        return "CPU: " +Convert.ToString(processor_name.GetValue("ProcessorNameString"));   //Display processor ingo. //MLHIDE
                     }
                     else { return "Error"; }
                 }
@@ -127,5 +133,19 @@ namespace rocket_engine_calc
         {
             Close();
         }
+      protected virtual void ml_UpdateControls()
+      {
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager ( typeof ( Form_about ) );
+        this.Text = resources.GetString("$this.Text") ;
+        B_OK.Text = resources.GetString("B_OK.Text") ;
+        L_desc.Text = resources.GetString("L_desc.Text") ;
+        lL_Licence.Text = resources.GetString("lL_Licence.Text") ;
+      }
+
+      public void Form_about_Disposed ( object sender, System.EventArgs e )
+      {
+        
+        MLRuntime.MLRuntime.LanguageChanged -= new MLRuntime.MLRuntime.LanguageChangedDelegate ( ml_UpdateControls ) ;
+      }
     }
 }

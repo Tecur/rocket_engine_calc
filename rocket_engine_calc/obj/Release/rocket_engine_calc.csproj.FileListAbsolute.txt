@@ -1,19 +1,31 @@
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.exe.config
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.exe
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.pdb
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form.resources
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Properties.Resources.resources
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.GenerateResource.cache
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.CoreCompileInputs.cache
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.exe
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.pdb
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_about.resources
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csprojAssemblyReference.cache
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\Newtonsoft.Json.dll
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\Newtonsoft.Json.pdb
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\Newtonsoft.Json.xml
-C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.CopyComplete
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.exe.manifest
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.application
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.exe
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\RE Calc.pdb
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\de-DE\RE Calc.resources.dll
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\en\RE Calc.resources.dll
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\MLRuntime.dll
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\bin\Release\Newtonsoft.Json.dll
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csprojAssemblyReference.cache
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_about.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_settings.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Properties.Resources.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_about.de-DE.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_about.en.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_settings.de-DE.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_settings.en.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form.de-DE.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form.en.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Properties.Resources.de-DE.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Properties.Resources.en.resources
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.GenerateResource.cache
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.CoreCompileInputs.cache
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\de-DE\RE Calc.resources.dll
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\en\RE Calc.resources.dll
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.exe.manifest
 C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.application
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.CopyComplete
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.exe
+C:\Users\joshu\Documents\GitHub\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.pdb
