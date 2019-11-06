@@ -16,5 +16,5 @@ jobs:
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
     - name: MSBuild
-      working-directory: src
+      working-directory: ./rocket_engine_calc
       run: msbuild rocket_engine_calc.csproj
