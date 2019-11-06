@@ -15,4 +15,4 @@ jobs:
       
     - name: MSBuild
       working-directory: ./rocket_engine_calc/MlRuntime
-      run: msbuild MLRuntime.csproj
+      run: msbuild MLRuntime.csproj -p:Configuration=Release
