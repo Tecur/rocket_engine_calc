@@ -3,7 +3,7 @@ name: Build
 on: [push]
 
 jobs:
-  build:
+  framework:
     name: .NET Framework
     runs-on: windows-latest
 
@@ -27,3 +27,16 @@ jobs:
     - name: MSBuild rocket_engine_calc Release
       working-directory: ./rocket_engine_calc
       run: msbuild rocket_engine_calc.csproj -p:Configuration=Release
+      
+  core:
+    name: .NET Core
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@master
+        
+      - uses: actions/setup-dotnet@v1
+        with:
+         dotnet-version: 3.0.100
+          
+      - run: dotnet build ./rocket_engine_calc_core/rocket_engine_calc_core.csproj
