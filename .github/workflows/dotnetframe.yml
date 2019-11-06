@@ -13,9 +13,12 @@ jobs:
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
 
+    - name: Setup Nuget.exe
+      uses: warrenbuckley/Setup-Nuget@v1
+      
     - name: NuGet packages
       working-directory: .
-      run: nuget.exe restore rocket_engine_calc.sln
+      run: nuget restore rocket_engine_calc.sln
       
     - name: MSBuild MLRuntime Release
       working-directory: ./rocket_engine_calc/MlRuntime
