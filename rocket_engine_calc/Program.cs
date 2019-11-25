@@ -23,9 +23,9 @@ namespace rocket_engine_calc
       frmLang.Dispose() ;
       frmLang = null ;
 
-     
 
-            Application.Run(new Form());
+            Form start_form = new Form();
+            Application.Run(start_form);
         }
     }
 }

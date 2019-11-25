@@ -73,18 +73,12 @@ namespace rocket_engine_calc
             System.Diagnostics.Debug.WriteLine("Lc = " + Convert.ToString(_calculator.Get_Lc(digitcount)) + " [cm]"); //MLHIDE
 
             //Zeichnen
-            SolidBrush myBrush = new SolidBrush(Color.Red);
-            Graphics formGraphics;
-            formGraphics = this.CreateGraphics();
-            formGraphics.FillRectangle(myBrush, new Rectangle(0, 0, 200, 300));
+            Form_Drawboard f = new Form_Drawboard(_calculator);
+            f.Show();
 
-            myBrush.Dispose();
-            formGraphics.Dispose();
-
-            
         }
 
-        
+
 
         private void NeuToolStripMenuItem_Click(object sender, EventArgs e)
         {

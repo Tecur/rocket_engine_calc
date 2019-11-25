@@ -55,26 +55,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="675752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="700336">
       <assemblyIdentity name="Newtonsoft.Json" version="12.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NZjMytW1Nf6m+TZiEHpBg7/WFnvx0PgCYENgk+3C468=</dsig:DigestValue>
+        <dsig:DigestValue>f5ErKKB8Im4L46z7L1fwUFOKugEA+h8L8sOfGh8dqBQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RE Calc.exe" size="579072">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RE Calc.exe" size="580608">
       <assemblyIdentity name="RE Calc" version="0.2.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>a1272HjRqY7k4zL+kjEYF5nuMoU0ooLL5ixCDumbV2g=</dsig:DigestValue>
+        <dsig:DigestValue>BH1jDIg8WGUGYC7HBghFlq7QdrIak2RyIC7y+w0Iyks=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,19 +86,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fF/Ht/niAM2TA4mDMZL/3jW2YmqKOoXr2LYc1h9/5tI=</dsig:DigestValue>
+        <dsig:DigestValue>Y7GvA2Vdp4tdYnNyRAinozwbKFaraD/gHO8mlsaLXbo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en\RE Calc.resources.dll" size="187904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en\RE Calc.resources.dll" size="188416">
       <assemblyIdentity name="RE Calc.resources" version="0.2.1.0" language="en" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TTjZ/SPRZaOCuWmek7X7acJkGu8SVg72Lh8YcrpR3vU=</dsig:DigestValue>
+        <dsig:DigestValue>xb2Qg6EzO4nxTNDTUFZD38eZLxWiMHArnFf7Ab0R2jM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

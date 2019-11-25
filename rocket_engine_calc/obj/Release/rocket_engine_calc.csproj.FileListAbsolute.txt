@@ -59,3 +59,4 @@ D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\RE 
 D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.csproj.CopyComplete
 D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.exe
 D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\RE Calc.pdb
+D:\Spieleprojekte\Git_repo\rocket_engine_calc\rocket_engine_calc\obj\Release\rocket_engine_calc.Form_Drawboard.resources

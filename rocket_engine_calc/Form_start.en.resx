@@ -496,6 +496,9 @@
   <data name="B_calc.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 26</value>
   </data>
+  <data name="tableLayoutPanel11.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowOnly</value>
+  </data>
   <data name="label45.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 260</value>
   </data>
@@ -1152,25 +1155,25 @@
     <value>39, 22</value>
   </data>
   <data name="hilfeAnzeigenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>151, 22</value>
   </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>148, 6</value>
   </data>
   <data name="problemMeldenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>166, 22</value>
   </data>
   <data name="vorschlagMachenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>166, 22</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>151, 22</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>148, 6</value>
   </data>
   <data name="überRECalcToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>151, 22</value>
   </data>
   <data name="hilfeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 22</value>

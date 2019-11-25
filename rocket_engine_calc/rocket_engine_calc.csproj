@@ -89,6 +89,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="Drawer.cs" />
+    <Compile Include="Form_Drawboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Drawboard.Designer.cs">
+      <DependentUpon>Form_Drawboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_about.resx">
       <DependentUpon>Form_about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Drawboard.resx">
+      <DependentUpon>Form_Drawboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_settings.de-DE.resx">
       <DependentUpon>Form_settings.cs</DependentUpon>
