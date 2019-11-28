@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RE Calc.exe" size="580608">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RE Calc.exe" size="581120">
       <assemblyIdentity name="RE Calc" version="0.2.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BH1jDIg8WGUGYC7HBghFlq7QdrIak2RyIC7y+w0Iyks=</dsig:DigestValue>
+        <dsig:DigestValue>se89af93zToey4vb0GOc25lfb8Avfzmyw83vd3Mufe8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Y7GvA2Vdp4tdYnNyRAinozwbKFaraD/gHO8mlsaLXbo=</dsig:DigestValue>
+        <dsig:DigestValue>gr/EbBgPPs84UOqYAPbDOqG7eonG5q1uGxChxkr9ZU4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xb2Qg6EzO4nxTNDTUFZD38eZLxWiMHArnFf7Ab0R2jM=</dsig:DigestValue>
+        <dsig:DigestValue>yHgUinJYZIzbow/ARWoEYVELGGgbpDQOpLdvxeoNoEM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

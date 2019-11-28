@@ -16,15 +16,15 @@
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
           UAC-Manifestoptionen
-          Wenn Sie die Ebene der Windows-Benutzerkontensteuerung ändern möchten, ersetzen Sie den 
-          Knoten "requestedExecutionLevel" durch eine der folgenden Angaben.
+          Wenn Sie die Zugangsebene für das Windows-Benutzerkonto ändern möchten, ersetzen Sie den 
+          requestedExecutionLevel-Knoten durch eines der folgenden Elemente.
 
-        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
-        <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
-        <requestedExecutionLevel level="highestAvailable" uiAccess="false" />
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         Wenn Sie Datei- und Registrierungsvirtualisierung für Abwärtskompatibilität 
-         verwenden möchten, löschen Sie den Knoten "requestedExecutionLevel".
+         Löschen Sie den requestedExecutionLevel-Knoten, wenn Sie 
+         zum Gewährleisten der Abwärtskompatibilität die Datei- und Registrierungsvirtualisierung verwenden möchten.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -44,37 +44,37 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MLRuntime.dll" size="16384">
-      <assemblyIdentity name="MLRuntime" version="1.0.1.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="MLRuntime" version="0.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+0Of6LHw5pxqlhilzEWQf5ICsFCZtXs1ILrMugKuhRE=</dsig:DigestValue>
+        <dsig:DigestValue>RBqSZoXRmAbCLzFGYpGVJAG61gHhL/ragQU0qPOeZqY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="675240">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="700336">
       <assemblyIdentity name="Newtonsoft.Json" version="12.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tmdJuB4UifzY11SyrTnr4NtoE0TjkqP0nckjVkO9vQY=</dsig:DigestValue>
+        <dsig:DigestValue>f5ErKKB8Im4L46z7L1fwUFOKugEA+h8L8sOfGh8dqBQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RE Calc.exe" size="586752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RE Calc.exe" size="588288">
       <assemblyIdentity name="RE Calc" version="0.2.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8SGtA/IMl+1h+w3MTJGAN8hysuIOmizJ53If9ApgVXs=</dsig:DigestValue>
+        <dsig:DigestValue>OtqdY0OE6wywaMTAO4tL/Jo4MsjEs8T9200arMP8nNI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,19 +86,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GpCbf1GQD7r0ijjGsZaBj9ESaowJFVFp8V/goC4fnx0=</dsig:DigestValue>
+        <dsig:DigestValue>Ef11EbKqU0ezrSxynJWdlFWAh5cL36OINasqqzEIH/U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en\RE Calc.resources.dll" size="137216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en\RE Calc.resources.dll" size="188416">
       <assemblyIdentity name="RE Calc.resources" version="0.2.1.0" language="en" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3KHpEBozNvVlTOfAU714w6mopy2iB0N4yMQJ2Rz4TXA=</dsig:DigestValue>
+        <dsig:DigestValue>FgqdNWSxE12fdPQUonFtLNAxXGeyUaeK8PHfGFbCa7I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,13 +111,13 @@
       <dsig:DigestValue>5HasDtw4n39XDVhy2Uuf7AK6DMppDLWUXd6PIbQRlrY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="RE Calc.exe.config" size="941">
+  <file name="RE Calc.exe.config" size="933">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>SO3ffPwbzZjiWixserg+u+mHt74/afNdobFcFnXoK8M=</dsig:DigestValue>
+      <dsig:DigestValue>k8YaanG7mXJM11SHiQPLVrU0nOkp4F8gJKSRjPFIeS4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="rocket_engine_calc_ml.xml" size="92390" writeableType="applicationData">

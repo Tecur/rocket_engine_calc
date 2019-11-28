@@ -11,17 +11,17 @@
     <deploymentProvider codebase="file://localhost/c$/Users/joshu/Documents/GitHub/rocket_engine_calc/Publish/RE%20Calc.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="RE Calc.exe.manifest" size="7043">
+    <dependentAssembly dependencyType="install" codebase="RE Calc.exe.manifest" size="7068">
       <assemblyIdentity name="RE Calc.exe" version="0.2.1.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AhkXYru3Euair7uVafzH9iCO3/zT9oB5/WTFgdyHZZY=</dsig:DigestValue>
+        <dsig:DigestValue>DtyjjntK/pAMuTbLQMHADoUhqxQ0cGACBxV4QYY/gF0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
