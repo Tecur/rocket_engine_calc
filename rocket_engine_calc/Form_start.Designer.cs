@@ -961,6 +961,7 @@
             // menu_Menu
             // 
             resources.ApplyResources(this.menu_Menu, "menu_Menu");
+            this.menu_Menu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menu_Menu.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menu_Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,

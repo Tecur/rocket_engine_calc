@@ -217,7 +217,7 @@
     <value>7, 93</value>
   </data>
   <data name="lL_Licence.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 13</value>
+    <value>191, 25</value>
   </data>
   <data name="lL_Licence.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -244,7 +244,7 @@
     <value>4, 64</value>
   </data>
   <data name="lL_Website.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 13</value>
+    <value>181, 25</value>
   </data>
   <data name="lL_Website.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -271,7 +271,7 @@
     <value>7, 35</value>
   </data>
   <data name="lL_Repo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 13</value>
+    <value>187, 25</value>
   </data>
   <data name="lL_Repo.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -304,7 +304,7 @@
     <value>0, 0</value>
   </data>
   <data name="l_Links.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 17</value>
+    <value>83, 31</value>
   </data>
   <data name="l_Links.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -355,7 +355,7 @@
     <value>4, 7</value>
   </data>
   <data name="L_desc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 13</value>
+    <value>215, 25</value>
   </data>
   <data name="L_desc.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
